@@ -1,0 +1,55 @@
+%YAML 1.2
+---
+# http://www.sublimetext.com/docs/3/syntax.html
+name: AviUtl Script (Lua)
+comment: "AviUtl Syntax from Lua Syntax: version 0.8"
+file_extensions:
+  - obj
+  - anm
+  - scn
+  - cam
+  - aviutl-script
+first_line_match: '-- AviUtl Script --'
+scope: source.lua.aviutl-script
+
+contexts:
+  prototype:
+    - include: scope:source.lua#prototype
+
+  main:
+    - include: aviutl-script-extension
+    - include: scope:source.lua#main # Packages/Lua/Lua.sublime-syntax#main
+
+  aviutl-script-extension:
+    - meta_scope: meta.block.aviutl-script
+
+    - include: section-label
+
+    - match: '\b(OR|AND|XOR|RGB|HSV|SHIFT|debug_print)\b'
+      scope: support.function.library.aviutl-script
+
+    - match: '\b(obj)\b(\.)\b(ox|oy|oz|zoom|alpha|aspect|rx|ry|rz|cx|cy|cz)\b'
+      captures:
+        1: constant.language.aviutl-script support.constant.builtin.aviutl-script
+        2: punctuation.accessor.dot.aviutl-script
+        3: variable.other.aviutl-script
+
+    - match: '\b(obj)\b(\.)\b(w|h|screen_w|screen_h|index|num|time|totaltime|frame|totalframe|framerate|x|y|z|layer|(check0|track(0|1|2|3))|(color|dialog|file|param))\b'
+      captures:
+        1: constant.language.aviutl-script support.constant.builtin.aviutl-script
+        2: punctuation.accessor.dot.aviutl-script
+        3: entity.name.constant.aviutl-script # or variable.other.constant
+
+    - match: '\b(obj)\b(\.)\b((mes|effect|rand|draw|drawpoly|load|setfont|filter|setanchor|interpolation|getaudio|(set|get)option|getvalue|getinfo|copybuffer|(get|put|copy)pixel|pixeloption|(get|put)pixeldata))\b'
+      captures:
+        1: constant.language.aviutl-script support.constant.builtin.aviutl-script
+        2: punctuation.accessor.dot.aviutl-script
+        3: support.function.library.aviutl-script
+
+    # - include: scope:source.lua#else-pop
+
+  section-label:
+    - match: '^\s*(\@)(\S+)(?=\s|-|$)'
+      captures:
+        1: punctuation.definition.keyword.aviutl-script keyword.declaration.extends.aviutl-script
+        2: entity.name.label.aviutl-script
