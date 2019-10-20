@@ -1,0 +1,8 @@
+<snippet>
+	<scope>source.lua.aviutl-script</scope>
+	<description>画像データのバッファ間コピーを行います</description>
+	<content><![CDATA[
+obj.copybuffer(${1})
+]]></content>
+	<tabTrigger>copybuffer</tabTrigger>
+</snippet>

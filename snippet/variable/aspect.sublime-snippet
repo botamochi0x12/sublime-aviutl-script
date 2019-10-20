@@ -1,0 +1,8 @@
+<snippet>
+	<scope>source.lua.aviutl-script</scope>
+	<description>アスペクト比(-1.0～1.0/プラス=横縮小/マイナス縦縮小)</description>
+	<content><![CDATA[
+obj.aspect
+]]></content>
+	<tabTrigger>aspect</tabTrigger>
+</snippet>

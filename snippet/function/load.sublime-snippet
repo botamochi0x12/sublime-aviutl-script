@@ -1,0 +1,8 @@
+<snippet>
+	<scope>source.lua.aviutl-script</scope>
+	<description>図形や任意のファイルを読み込みます。</description>
+	<content><![CDATA[
+obj.load(${1:--[[type={"画像ファイル"="image", "動画ファイル"="movie", "テキスト"="text", "図形"="figure", "フレームバッファ"="framebuffer", "仮想バッファ"="tempbuffer"\}--]]})$0
+]]></content>
+	<tabTrigger>load</tabTrigger>
+</snippet>

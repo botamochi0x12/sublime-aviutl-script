@@ -1,0 +1,8 @@
+<snippet>
+	<scope>source.lua.aviutl-script</scope>
+	<description>裏面を表示しない</description>
+	<content><![CDATA[
+obj.setoption("culling",${1:value})$0
+]]></content>
+	<tabTrigger>culling</tabTrigger>
+</snippet>

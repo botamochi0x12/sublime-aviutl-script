@@ -1,0 +1,8 @@
+<snippet>
+	<scope>source.lua.aviutl-script</scope>
+	<description>画像の高さ(ReadOnly)</description>
+	<content><![CDATA[
+obj.h
+]]></content>
+	<tabTrigger>h</tabTrigger>
+</snippet>

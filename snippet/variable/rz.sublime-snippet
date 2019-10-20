@@ -1,0 +1,8 @@
+<snippet>
+	<scope>source.lua.aviutl-script</scope>
+	<description>Z軸回転角度(360.0で一回転)</description>
+	<content><![CDATA[
+obj.rz
+]]></content>
+	<tabTrigger>rz</tabTrigger>
+</snippet>

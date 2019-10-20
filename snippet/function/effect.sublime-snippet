@@ -1,0 +1,9 @@
+<snippet>
+	<scope>source.lua.aviutl-script</scope>
+	<description>指定のフィルタ効果を実行します。メディアオブジェクトのみ使用出来ます。
+引数なしで呼ぶとスクリプト以降のフィルタ効果を実行します。</description>
+	<content><![CDATA[
+obj.effect(${1})
+]]></content>
+	<tabTrigger>effect</tabTrigger>
+</snippet>

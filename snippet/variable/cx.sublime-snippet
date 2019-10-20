@@ -1,0 +1,8 @@
+<snippet>
+	<scope>source.lua.aviutl-script</scope>
+	<description>中心の相対座標X</description>
+	<content><![CDATA[
+obj.cx
+]]></content>
+	<tabTrigger>cx</tabTrigger>
+</snippet>

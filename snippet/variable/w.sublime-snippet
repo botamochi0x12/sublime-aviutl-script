@@ -1,0 +1,8 @@
+<snippet>
+	<scope>source.lua.aviutl-script</scope>
+	<description>画像の幅(ReadOnly)</description>
+	<content><![CDATA[
+obj.w
+]]></content>
+	<tabTrigger>w</tabTrigger>
+</snippet>

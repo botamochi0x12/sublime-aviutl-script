@@ -1,0 +1,8 @@
+<snippet>
+	<scope>source.lua.aviutl-script</scope>
+	<description>複数オブジェクト時の数(1=単体オブジェクト/0=不定)。(ReadOnly)</description>
+	<content><![CDATA[
+obj.num
+]]></content>
+	<tabTrigger>num</tabTrigger>
+</snippet>

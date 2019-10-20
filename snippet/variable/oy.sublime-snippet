@@ -1,0 +1,8 @@
+<snippet>
+	<scope>source.lua.aviutl-script</scope>
+	<description>基準座標からの相対座標Y</description>
+	<content><![CDATA[
+obj.oy
+]]></content>
+	<tabTrigger>oy</tabTrigger>
+</snippet>

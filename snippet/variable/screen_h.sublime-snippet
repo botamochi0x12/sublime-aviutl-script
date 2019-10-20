@@ -1,0 +1,8 @@
+<snippet>
+	<scope>source.lua.aviutl-script</scope>
+	<description>画面の高さ(ReadOnly)</description>
+	<content><![CDATA[
+obj.screen_h
+]]></content>
+	<tabTrigger>screen_h</tabTrigger>
+</snippet>

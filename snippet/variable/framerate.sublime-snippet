@@ -1,0 +1,8 @@
+<snippet>
+	<scope>source.lua.aviutl-script</scope>
+	<description>フレームレート(ReadOnly)</description>
+	<content><![CDATA[
+obj.framerate
+]]></content>
+	<tabTrigger>framerate</tabTrigger>
+</snippet>

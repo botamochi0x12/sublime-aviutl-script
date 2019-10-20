@@ -1,0 +1,8 @@
+<snippet>
+	<scope>source.lua.aviutl-script</scope>
+	<description>基準座標からの相対座標X</description>
+	<content><![CDATA[
+obj.ox
+]]></content>
+	<tabTrigger>ox</tabTrigger>
+</snippet>

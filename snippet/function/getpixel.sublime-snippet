@@ -1,0 +1,8 @@
+<snippet>
+	<scope>source.lua.aviutl-script</scope>
+	<description>ピクセルの色など、各種ピクセル情報を取得します。</description>
+	<content><![CDATA[
+obj.getpixel(${1})
+]]></content>
+	<tabTrigger>getpixel</tabTrigger>
+</snippet>

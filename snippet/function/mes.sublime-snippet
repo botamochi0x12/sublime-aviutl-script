@@ -1,0 +1,8 @@
+<snippet>
+	<scope>source.lua.aviutl-script</scope>
+	<description>テキストオブジェクトで、文字として表示します。</description>
+	<content><![CDATA[
+obj.mes(${1:"str"})$0
+]]></content>
+	<tabTrigger>mes</tabTrigger>
+</snippet>

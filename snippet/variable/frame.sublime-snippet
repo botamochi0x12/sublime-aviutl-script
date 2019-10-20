@@ -1,0 +1,8 @@
+<snippet>
+	<scope>source.lua.aviutl-script</scope>
+	<description>オブジェクトの開始フレームからの経過フレーム数(ReadOnly)</description>
+	<content><![CDATA[
+obj.frame
+]]></content>
+	<tabTrigger>frame</tabTrigger>
+</snippet>

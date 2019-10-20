@@ -1,0 +1,8 @@
+<snippet>
+	<scope>source.lua.aviutl-script</scope>
+	<description>オブジェクトが配置されているレイヤー</description>
+	<content><![CDATA[
+obj.layer
+]]></content>
+	<tabTrigger>layer</tabTrigger>
+</snippet>

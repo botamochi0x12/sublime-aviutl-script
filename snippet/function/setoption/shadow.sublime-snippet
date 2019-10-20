@@ -1,0 +1,8 @@
+<snippet>
+	<scope>source.lua.aviutl-script</scope>
+	<description>シャドーの対象</description>
+	<content><![CDATA[
+obj.setoption("shadow",${1:value})$0
+]]></content>
+	<tabTrigger>shadow</tabTrigger>
+</snippet>
