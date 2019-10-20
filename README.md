@@ -6,9 +6,9 @@ Configuration files of AviUtl for Sublime Text 3
 ToDo
 ----
 
--[ ] include `rikky_module` functions;
--[ ] show function usages;
--[ ] migrate to VSCode, Atom;
+- [ ] include `rikky_module` functions;
+- [ ] show function usages;
+- [ ] migrate to VSCode, Atom;
 
 References
 ----------
