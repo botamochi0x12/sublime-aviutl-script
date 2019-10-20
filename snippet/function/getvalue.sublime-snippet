@@ -1,0 +1,8 @@
+<snippet>
+	<scope>source.lua.aviutl-script</scope>
+	<description>設定ダイアログの数値など、オブジェクトの設定値を取得します。</description>
+	<content><![CDATA[
+obj.getvalue(${1})
+]]></content>
+	<tabTrigger>getvalue</tabTrigger>
+</snippet>

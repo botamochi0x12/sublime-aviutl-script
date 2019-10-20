@@ -1,0 +1,8 @@
+<snippet>
+	<scope>source.lua.aviutl-script</scope>
+	<description>基準座標からの相対座標Z</description>
+	<content><![CDATA[
+obj.oz
+]]></content>
+	<tabTrigger>oz</tabTrigger>
+</snippet>

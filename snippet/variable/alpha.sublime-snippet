@@ -1,0 +1,8 @@
+<snippet>
+	<scope>source.lua.aviutl-script</scope>
+	<description>不透明度(0.0=透明/1.0=不透明)</description>
+	<content><![CDATA[
+obj.alpha
+]]></content>
+	<tabTrigger>alpha</tabTrigger>
+</snippet>

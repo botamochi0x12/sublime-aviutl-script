@@ -1,0 +1,8 @@
+<snippet>
+	<scope>source.lua.aviutl-script</scope>
+	<description>オブジェクトの区間数など、オブジェクトの各種設定を取得します。</description>
+	<content><![CDATA[
+obj.getoption(${1})
+]]></content>
+	<tabTrigger>getoption</tabTrigger>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<scope>source.lua.aviutl-script</scope>
+	<description>カメラの方を向く</description>
+	<content><![CDATA[
+obj.setoption("billboard",${1:value})$0
+]]></content>
+	<tabTrigger>billboard</tabTrigger>
+</snippet>

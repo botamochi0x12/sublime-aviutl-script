@@ -1,0 +1,8 @@
+<snippet>
+	<scope>source.lua.aviutl-script</scope>
+	<description>音声データを取得します。</description>
+	<content><![CDATA[
+obj.getaudio(${1})
+]]></content>
+	<tabTrigger>getaudio</tabTrigger>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<scope>source.lua.aviutl-script</scope>
+	<description>拡大率(1.0=等倍)</description>
+	<content><![CDATA[
+obj.zoom
+]]></content>
+	<tabTrigger>zoom</tabTrigger>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<scope>source.lua.aviutl-script</scope>
+	<description>中心の相対座標Y</description>
+	<content><![CDATA[
+obj.cy
+]]></content>
+	<tabTrigger>cy</tabTrigger>
+</snippet>

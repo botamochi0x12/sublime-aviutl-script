@@ -1,0 +1,8 @@
+<snippet>
+	<scope>source.lua.aviutl-script</scope>
+	<description>2点間の座標を曲線的に補間します。</description>
+	<content><![CDATA[
+obj.interpolation(${1})
+]]></content>
+	<tabTrigger>interpolation</tabTrigger>
+</snippet>

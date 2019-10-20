@@ -1,0 +1,8 @@
+<snippet>
+	<scope>source.lua.aviutl-script</scope>
+	<description>ピクセル情報をコピーします。</description>
+	<content><![CDATA[
+obj.copypixel(${1})
+]]></content>
+	<tabTrigger>copypixel</tabTrigger>
+</snippet>

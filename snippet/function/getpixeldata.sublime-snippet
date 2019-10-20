@@ -1,0 +1,8 @@
+<snippet>
+	<scope>source.lua.aviutl-script</scope>
+	<description>外部DLLに渡すユーザーデータと画像の縦横サイズを取得します。</description>
+	<content><![CDATA[
+obj.getpixeldata(${1})
+]]></content>
+	<tabTrigger>getpixeldata</tabTrigger>
+</snippet>

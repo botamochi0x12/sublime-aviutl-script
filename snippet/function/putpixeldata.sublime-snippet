@@ -1,0 +1,8 @@
+<snippet>
+	<scope>source.lua.aviutl-script</scope>
+	<description>外部DLLから受け取ったユーザーデータを現在のオブジェクトに書き込みます。</description>
+	<content><![CDATA[
+obj.putpixeldata(${1})
+]]></content>
+	<tabTrigger>putpixeldata</tabTrigger>
+</snippet>

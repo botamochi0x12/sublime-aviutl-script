@@ -1,0 +1,8 @@
+<snippet>
+	<scope>source.lua.aviutl-script</scope>
+	<description>スクリプトの各種情報を取得します。</description>
+	<content><![CDATA[
+obj.getinfo(${1})
+]]></content>
+	<tabTrigger>getinfo</tabTrigger>
+</snippet>

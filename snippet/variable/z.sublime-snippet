@@ -1,0 +1,8 @@
+<snippet>
+	<scope>source.lua.aviutl-script</scope>
+	<description>表示基準座標Z(ReadOnly)</description>
+	<content><![CDATA[
+obj.z
+]]></content>
+	<tabTrigger>z</tabTrigger>
+</snippet>

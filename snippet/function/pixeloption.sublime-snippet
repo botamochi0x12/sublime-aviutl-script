@@ -1,0 +1,8 @@
+<snippet>
+	<scope>source.lua.aviutl-script</scope>
+	<description>ピクセルの各種オプションを指定をします。</description>
+	<content><![CDATA[
+obj.pixeloption(${1})
+]]></content>
+	<tabTrigger>pixeloption</tabTrigger>
+</snippet>

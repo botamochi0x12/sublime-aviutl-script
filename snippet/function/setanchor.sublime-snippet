@@ -1,0 +1,8 @@
+<snippet>
+	<scope>source.lua.aviutl-script</scope>
+	<description>複数のアンカーポイントを設定し、マウスドラッグで操作できるようにします。</description>
+	<content><![CDATA[
+obj.setanchor(${1})
+]]></content>
+	<tabTrigger>setanchor</tabTrigger>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<scope>source.lua.aviutl-script</scope>
+	<description>オブジェクトの開始フレームから終了フレームまでの総秒数(ReadOnly)</description>
+	<content><![CDATA[
+obj.totaltime
+]]></content>
+	<tabTrigger>totaltime</tabTrigger>
+</snippet>

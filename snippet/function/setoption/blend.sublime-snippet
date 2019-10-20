@@ -1,0 +1,8 @@
+<snippet>
+	<scope>source.lua.aviutl-script</scope>
+	<description>合成モード。0=通常 / 1=加算 / 2=減算 / 3=乗算 / 4=スクリーン / 5=オーバーレイ / 6=比較(明) / 7=比較(暗) / 8=輝度 / 9=色差</description>
+	<content><![CDATA[
+obj.setoption("blend",${1:value})$0
+]]></content>
+	<tabTrigger>blend</tabTrigger>
+</snippet>

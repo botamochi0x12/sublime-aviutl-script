@@ -1,0 +1,8 @@
+<snippet>
+	<scope>source.lua.aviutl-script</scope>
+	<description>オブジェクトの開始フレームからの経過秒数(ReadOnly)</description>
+	<content><![CDATA[
+obj.time
+]]></content>
+	<tabTrigger>time</tabTrigger>
+</snippet>

@@ -1,0 +1,8 @@
+<snippet>
+	<scope>source.lua.aviutl-script</scope>
+	<description>画面の幅(ReadOnly)</description>
+	<content><![CDATA[
+obj.screen_w
+]]></content>
+	<tabTrigger>screen_w</tabTrigger>
+</snippet>

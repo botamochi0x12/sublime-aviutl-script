@@ -1,0 +1,8 @@
+<snippet>
+	<scope>source.lua.aviutl-script</scope>
+	<description>オブジェクトを描画します。</description>
+	<content><![CDATA[
+obj.draw(${1:${2:ox},${3:oy},${4:oz},${5:zoom},${6:alpha},${7:rx},${8:ry},${9:rz}})$0
+]]></content>
+	<tabTrigger>draw</tabTrigger>
+</snippet>

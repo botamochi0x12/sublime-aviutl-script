@@ -1,0 +1,8 @@
+<snippet>
+	<scope>source.lua.aviutl-script</scope>
+	<description>AviUtl Script environment</description>
+	<content><![CDATA[
+-- AviUtl Script --
+]]></content>
+	<tabTrigger>!env</tabTrigger>
+</snippet>

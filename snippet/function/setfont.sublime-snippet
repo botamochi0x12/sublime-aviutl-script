@@ -1,0 +1,8 @@
+<snippet>
+	<scope>source.lua.aviutl-script</scope>
+	<description>obj.load("text") の対象で使用するフォントを設定します。decorate:0=装飾無し / 1=影付き文字 / 2=影付き文字(薄) / 3=縁取り文字 / 4=縁取り文字(細)</description>
+	<content><![CDATA[
+obj.setfont(${1:fontname}, ${2:fontsize}, ${3:decorate}, ${4:col1}, ${5:col2})$0
+]]></content>
+	<tabTrigger>setfont</tabTrigger>
+</snippet>

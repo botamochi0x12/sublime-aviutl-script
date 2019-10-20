@@ -1,0 +1,14 @@
+<snippet>
+	<scope>source.lua.aviutl-script</scope>
+	<description>合成モード等、様々なオプションを指定します。 see also (culling|billboard|shadow|antialias|blend|drawtarget|tempbuffer)
+<!-- 裏面を表示しない：culling
+カメラの方向を向く：billboard
+シャドーの対象：shadow
+アンチエイリアス：antialias
+合成モード：blend
+描画先を仮想バッファに変更する："drawtarget","tempbuffer"[,w,h] --></description>
+	<content><![CDATA[
+obj.setoption(${1:name},${2:value})$0
+]]></content>
+	<tabTrigger>setoption</tabTrigger>
+</snippet>

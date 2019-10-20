@@ -1,0 +1,8 @@
+<snippet>
+	<scope>source.lua.aviutl-script</scope>
+	<description>複数オブジェクト時の番号。0 &le; obj.index &le; obj.num-1. (ReadOnly)</description>
+	<content><![CDATA[
+obj.index
+]]></content>
+	<tabTrigger>index</tabTrigger>
+</snippet>

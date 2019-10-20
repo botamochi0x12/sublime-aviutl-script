@@ -1,0 +1,8 @@
+<snippet>
+	<scope>source.lua.aviutl-script</scope>
+	<description>ピクセル情報を書き換えます。</description>
+	<content><![CDATA[
+obj.putpixel(${1})
+]]></content>
+	<tabTrigger>putpixel</tabTrigger>
+</snippet>
