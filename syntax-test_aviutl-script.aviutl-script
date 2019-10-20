@@ -1,0 +1,91 @@
+-- SYNTAX TEST "Packages/User/AviUtl/AviUtl.sublime-syntax"
+-- AviUtl Script --
+-- ^ source.lua.aviutl-script comment.line
+-- <- punctuation.definition.comment
+
+--[[
+foo, bar, buzz
+]]
+
+local x
+-- <- source.lua.aviutl-script storage.modifier.lua
+--    ^ source.lua.aviutl-script variable.other.lua
+
+if (true or nil)~=false then x = math.pi end
+-- <- source.lua.aviutl-script keyword.control.conditional.lua
+-- ^ source.lua.aviutl-script meta.group.lua punctuation.section.group.begin.lua
+--  ^ source.lua.aviutl-script meta.group.lua constant.language.boolean.true.lua
+--       ^ source.lua.aviutl-script meta.group.lua keyword.operator.logical.lua
+--          ^ source.lua.aviutl-script meta.group.lua constant.language.null.lua
+--             ^ source.lua.aviutl-script meta.group.lua punctuation.section.group.end.lua
+--              ^ source.lua.aviutl-script keyword.operator.comparison.lua
+--                ^ source.lua.aviutl-script constant.language.boolean.true.lua
+--                       ^ source.lua.aviutl-script meta.block.lua keyword.control.conditional.lua
+--                           ^ source.lua.aviutl-script meta.block.lua variable.other.lua
+--                             ^ source.lua.aviutl-script meta.block.lua keyword.operator.assignment.lua
+--                               ^ source.lua.aviutl-script meta.block.lua support.constant.builtin.lua
+
+require("math")
+-- <- source.lua.aviutl-script support.function.builtin.lua
+
+print("test")
+-- <- source.lua.aviutl-script support.function.builtin.lua
+
+math.atan2(1,2)
+-- <- source.lua.aviutl-script support.function.builtin.lua
+
+math.atan(1,2)
+-- <- source.lua.aviutl-script support.function.builtin.lua
+
+text = "hoge" .. [[fuga]]
+-- <- source.lua.aviutl-script variable.other.lua
+--   ^ source.lua.aviutl-script keyword.operator.assignment.lua
+--      ^ source.lua.aviutl-script string.quoted.double.lua
+--            ^ source.lua.aviutl-script keyword.operator.concatenation.lua
+--               ^ source.lua.aviutl-script string.quoted.multiline.lua punctuation.definition.string.begin.lua
+
+-- self.new()
+-- <- source.lua.aviutl-script variable.language.this.lua
+--   ^ source.lua.aviutl-script meta.property.lua variable.function.lua
+
+@new
+-- <- source.lua.aviutl-script punctuation.definition.keyword.aviutl-script keyword.declaration.extends.aviutl-script
+
+-- @ほげ ほげ -- space よりあとはラベルとして無視
+-- <- source.lua.aviutl-script
+
+-- check0:peke,1
+--file:
+
+obj = {x= 0, ox= 1, mes=print}
+AND = function( ... )
+    return true
+end
+
+AND()
+-- <- source.lua.aviutl-script variable.function.lua
+
+function debug_print( ... )
+    return nil
+end
+
+debug_print()
+-- <- source.lua.aviutl-script support.function.library.aviutl-script
+
+if debug_print() then end
+-- ^^^^^^^^^^^ source.lua.aviutl-script support.function.library.aviutl-script
+
+if obj.x then print("x pass") end
+-- ^^^ source.lua.aviutl-script constant.language.aviutl-script support.constant.builtin.aviutl-script
+--    ^ source.lua.aviutl-script punctuation.accessor.dot.aviutl-script
+--     ^ source.lua.aviutl-script entity.name.constant.aviutl-script
+
+if obj.ox then print("ox pass") end
+--     ^^ source.lua.aviutl-script variable.other.lua
+
+obj.mes("fizz buz")
+-- <- source.lua.aviutl-script constant.language.aviutl-script support.constant.builtin.aviutl-script
+--  ^ source.lua.aviutl-script support.function.library.aviutl-script
+
+return x
+-- <- source.lua.aviutl-script keyword.control.return.lua
