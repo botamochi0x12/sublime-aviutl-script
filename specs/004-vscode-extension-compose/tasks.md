@@ -23,8 +23,8 @@ All paths are relative to `vscode-aviutl-script/` within the repository root.
 
 **Purpose**: Install packaging tooling and remove stale build artifacts
 
-- [ ] T001 Install `@vscode/vsce` as devDependency by running `npm install --save-dev @vscode/vsce` in `vscode-aviutl-script/`
-- [ ] T002 Remove stale pre-existing `vscode-aviutl-script/aviutl-script-0.1.0.vsix` build artifact
+- [x] T001 Install `@vscode/vsce` as devDependency by running `npm install --save-dev @vscode/vsce` in `vscode-aviutl-script/`
+- [x] T002 Remove stale pre-existing `vscode-aviutl-script/aviutl-script-0.1.0.vsix` build artifact
 
 ---
 
@@ -34,8 +34,8 @@ All paths are relative to `vscode-aviutl-script/` within the repository root.
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete
 
-- [ ] T003 [P] Create `vscode-aviutl-script/LICENSE` with MIT License text (copyright holder: botamochi0x12, year: 2026)
-- [ ] T004 [P] Create `vscode-aviutl-script/images/icon.png` — 256x256 PNG extension icon (simple design recognizable at small sizes, works on light and dark themes)
+- [x] T003 [P] Create `vscode-aviutl-script/LICENSE` with MIT License text (copyright holder: botamochi0x12, year: 2026)
+- [x] T004 [P] Create `vscode-aviutl-script/images/icon.png` — 256x256 PNG extension icon (simple design recognizable at small sizes, works on light and dark themes)
 
 **Checkpoint**: Foundation ready — user story implementation can now begin
 
@@ -49,11 +49,11 @@ All paths are relative to `vscode-aviutl-script/` within the repository root.
 
 ### Implementation for User Story 1
 
-- [ ] T005 [US1] Rewrite `vscode-aviutl-script/.vscodeignore` to exclude `test/**`, `node_modules/**`, `.vscode/**`, `*.vsix`, `.git/**`, `.github/**`, `.gitignore`, `package-lock.json` — but keep `README.md`, `CHANGELOG.md`, `LICENSE` included (per research.md R3)
-- [ ] T006 [US1] Add `"vscode:prepublish": "npm test"` to `scripts` in `vscode-aviutl-script/package.json` so grammar tests run before every package/publish
-- [ ] T007 [US1] Add `"license": "MIT"` field to `vscode-aviutl-script/package.json`
-- [ ] T008 [US1] Verify packaging by running `npx @vscode/vsce ls` in `vscode-aviutl-script/` and confirm README.md, CHANGELOG.md, LICENSE, images/icon.png are included; test/, node_modules/, *.vsix are excluded
-- [ ] T009 [US1] Run `npx @vscode/vsce package` in `vscode-aviutl-script/` and verify `.vsix` is produced without errors
+- [x] T005 [US1] Rewrite `vscode-aviutl-script/.vscodeignore` to exclude `test/**`, `node_modules/**`, `.vscode/**`, `*.vsix`, `.git/**`, `.github/**`, `.gitignore`, `package-lock.json` — but keep `README.md`, `CHANGELOG.md`, `LICENSE` included (per research.md R3)
+- [x] T006 [US1] Add `"vscode:prepublish": "npm test"` to `scripts` in `vscode-aviutl-script/package.json` so grammar tests run before every package/publish
+- [x] T007 [US1] Add `"license": "MIT"` field to `vscode-aviutl-script/package.json`
+- [x] T008 [US1] Verify packaging by running `npx @vscode/vsce ls` in `vscode-aviutl-script/` and confirm README.md, CHANGELOG.md, LICENSE, images/icon.png are included; test/, node_modules/, *.vsix are excluded
+- [x] T009 [US1] Run `npx @vscode/vsce package` in `vscode-aviutl-script/` and verify `.vsix` is produced without errors
 
 **Checkpoint**: User Story 1 complete — extension is packageable and installable from `.vsix`
 
@@ -67,10 +67,10 @@ All paths are relative to `vscode-aviutl-script/` within the repository root.
 
 ### Implementation for User Story 2
 
-- [ ] T010 [P] [US2] Create `vscode-aviutl-script/README.md` — bilingual (Japanese primary, English headers) description of supported file types (`.obj`, `.anm`, `.scn`, `.cam`, `.aviutl-script`), features (syntax highlighting, 55 snippets), snippet usage examples, VS Code version requirement, and license reference (per research.md R5)
-- [ ] T011 [P] [US2] Create `vscode-aviutl-script/CHANGELOG.md` following Keep a Changelog format — initial entry for v0.1.0 with: syntax highlighting, 55 snippets, supported file extensions, language configuration (per research.md R7)
-- [ ] T012 [US2] Add Marketplace metadata fields to `vscode-aviutl-script/package.json`: `publisher` (placeholder: `"botamochi0x12"`), `repository` (`{ "type": "git", "url": "https://github.com/botamochi0x12/sublime-aviutl-script" }`), `icon` (`"images/icon.png"`), `keywords` (`["AviUtl", "Lua", "aviutl-script", "video editing", "scripting"]`), `homepage` (`"https://github.com/botamochi0x12/sublime-aviutl-script"`) (per research.md R2)
-- [ ] T013 [US2] Re-run `npx @vscode/vsce package` to verify the enriched package builds without errors and passes Marketplace validation
+- [x] T010 [P] [US2] Create `vscode-aviutl-script/README.md` — bilingual (Japanese primary, English headers) description of supported file types (`.obj`, `.anm`, `.scn`, `.cam`, `.aviutl-script`), features (syntax highlighting, 55 snippets), snippet usage examples, VS Code version requirement, and license reference (per research.md R5)
+- [x] T011 [P] [US2] Create `vscode-aviutl-script/CHANGELOG.md` following Keep a Changelog format — initial entry for v0.1.0 with: syntax highlighting, 55 snippets, supported file extensions, language configuration (per research.md R7)
+- [x] T012 [US2] Add Marketplace metadata fields to `vscode-aviutl-script/package.json`: `publisher` (placeholder: `"botamochi0x12"`), `repository` (`{ "type": "git", "url": "https://github.com/botamochi0x12/sublime-aviutl-script" }`), `icon` (`"images/icon.png"`), `keywords` (`["AviUtl", "Lua", "aviutl-script", "video editing", "scripting"]`), `homepage` (`"https://github.com/botamochi0x12/sublime-aviutl-script"`) (per research.md R2)
+- [x] T013 [US2] Re-run `npx @vscode/vsce package` to verify the enriched package builds without errors and passes Marketplace validation
 
 **Checkpoint**: User Story 2 complete — extension has full Marketplace metadata and documentation
 
@@ -84,8 +84,8 @@ All paths are relative to `vscode-aviutl-script/` within the repository root.
 
 ### Implementation for User Story 3
 
-- [ ] T014 [US3] Verify `vscode:prepublish` hook triggers `npm test` by running `npx @vscode/vsce package` and confirming grammar tests execute before packaging
-- [ ] T015 [US3] Verify regression detection by temporarily breaking a scope in `vscode-aviutl-script/syntaxes/aviutl-script.tmLanguage.json`, running `npm test`, confirming failure, then reverting the change
+- [x] T014 [US3] Verify `vscode:prepublish` hook triggers `npm test` by running `npx @vscode/vsce package` and confirming grammar tests execute before packaging
+- [x] T015 [US3] Verify regression detection by temporarily breaking a scope in `vscode-aviutl-script/syntaxes/aviutl-script.tmLanguage.json`, running `npm test`, confirming failure, then reverting the change
 
 **Checkpoint**: User Story 3 complete — automated test pipeline validated
 
@@ -95,8 +95,8 @@ All paths are relative to `vscode-aviutl-script/` within the repository root.
 
 **Purpose**: Final validation across all stories
 
-- [ ] T016 Run full packaging verification: `npm test && npx @vscode/vsce ls && npx @vscode/vsce package` in `vscode-aviutl-script/`
-- [ ] T017 Verify backward compatibility: confirm no changes to Sublime Text files (`AviUtl.sublime-syntax`, `snippet/`, `syntax-test_aviutl-script.aviutl-script`)
+- [x] T016 Run full packaging verification: `npm test && npx @vscode/vsce ls && npx @vscode/vsce package` in `vscode-aviutl-script/`
+- [x] T017 Verify backward compatibility: confirm no changes to Sublime Text files (`AviUtl.sublime-syntax`, `snippet/`, `syntax-test_aviutl-script.aviutl-script`)
 
 ---
 

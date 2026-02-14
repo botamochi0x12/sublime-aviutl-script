@@ -28,6 +28,16 @@ Sublime Text 3 syntax highlighting and snippet package for **AviUtl scripting** 
 
 Run syntax tests in Sublime Text 3 via **Tools > Build** with the test file open, or use the command palette: **Build With: Syntax Tests**. The test file uses `-- SYNTAX TEST` header and `-- ^ scope.name` / `-- <- scope.name` assertion comments.
 
+## Code Versioning
+
+- **Git commit after EVERY task**: Run `git add` + `git commit` immediately after completing each task (T001, T002, …). Do NOT batch multiple tasks into a single commit. Each task = one atomic commit.
+- **Commit message format**: Follow [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/). The description after the type/scope MUST start with a capitalized verb (e.g., `feat: Enable`, `test: Assert`, `chore: Use`). Keep the subject line concise and imperative — explain *why* and do not just *what*. Examples:
+  - `chore: Initialize VS Code extension directory`
+  - `chore: Use "vscode-tmgrammar-test"`
+  - `test: Assert section label grammar`
+  - `feat: Enable section-label pattern grammar`
+  - `feat(snippets): Enable method snippets`
+
 ## Key References
 
 - AviUtl scripting keyword reference: https://ch.nicovideo.jp/usunoro/blomaga/ar915424
