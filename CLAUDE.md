@@ -37,3 +37,10 @@ Run syntax tests in Sublime Text 3 via **Tools > Build** with the test file open
 ## File Extensions
 
 `.obj`, `.anm`, `.scn`, `.cam`, `.aviutl-script` — all recognized as AviUtl Script (Lua). First-line match: `-- AviUtl Script --`.
+
+## Active Technologies
+- JSON (TextMate grammar, VS Code snippets, language config); Node.js for tooling/testing + VS Code Extension API (declarative — no runtime code needed); `vscode-tmgrammar-test` (dev dependency for grammar testing) (002-vscode-extension-migration)
+- N/A (static declarative extension — no runtime state) (002-vscode-extension-migration)
+
+## Recent Changes
+- 002-vscode-extension-migration: Added JSON (TextMate grammar, VS Code snippets, language config); Node.js for tooling/testing + VS Code Extension API (declarative — no runtime code needed); `vscode-tmgrammar-test` (dev dependency for grammar testing)

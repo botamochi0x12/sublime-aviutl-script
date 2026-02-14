@@ -1,0 +1,50 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "AviUtl Script (Lua)",
+  "scopeName": "source.lua.aviutl-script",
+  "patterns": [
+    { "include": "#section-label" },
+    { "include": "#aviutl-functions" },
+    { "include": "#obj-mutable-properties" },
+    { "include": "#obj-readonly-properties" },
+    { "include": "#obj-methods" },
+    { "include": "source.lua" }
+  ],
+  "repository": {
+    "section-label": {
+      "match": "^\\s*(\\@)(\\S+)(?=\\s|-|$)",
+      "captures": {
+        "1": { "name": "punctuation.definition.keyword.aviutl-script keyword.declaration.extends.aviutl-script" },
+        "2": { "name": "entity.name.label.aviutl-script" }
+      }
+    },
+    "aviutl-functions": {
+      "match": "\\b(OR|AND|XOR|RGB|HSV|SHIFT|debug_print)\\b",
+      "name": "support.function.library.aviutl-script"
+    },
+    "obj-mutable-properties": {
+      "match": "\\b(obj)\\b(\\.)(ox|oy|oz|zoom|alpha|aspect|rx|ry|rz|cx|cy|cz)\\b",
+      "captures": {
+        "1": { "name": "constant.language.aviutl-script support.constant.builtin.aviutl-script" },
+        "2": { "name": "punctuation.accessor.dot.aviutl-script" },
+        "3": { "name": "variable.other.aviutl-script" }
+      }
+    },
+    "obj-readonly-properties": {
+      "match": "\\b(obj)\\b(\\.)(w|h|screen_w|screen_h|index|num|time|totaltime|frame|totalframe|framerate|x|y|z|layer|check0|track0|track1|track2|track3|color|dialog|file|param)\\b",
+      "captures": {
+        "1": { "name": "constant.language.aviutl-script support.constant.builtin.aviutl-script" },
+        "2": { "name": "punctuation.accessor.dot.aviutl-script" },
+        "3": { "name": "entity.name.constant.aviutl-script" }
+      }
+    },
+    "obj-methods": {
+      "match": "\\b(obj)\\b(\\.)(mes|effect|rand|draw|drawpoly|load|setfont|filter|setanchor|interpolation|getaudio|setoption|getoption|getvalue|getinfo|copybuffer|getpixel|putpixel|copypixel|pixeloption|getpixeldata|putpixeldata)\\b",
+      "captures": {
+        "1": { "name": "constant.language.aviutl-script support.constant.builtin.aviutl-script" },
+        "2": { "name": "punctuation.accessor.dot.aviutl-script" },
+        "3": { "name": "support.function.library.aviutl-script" }
+      }
+    }
+  }
+}
