@@ -1,0 +1,4 @@
+-- SYNTAX TEST "source.lua.aviutl-script"
+
+-- Lua baseline: verify comment scoping
+-- <- comment.line.double-dash.lua
