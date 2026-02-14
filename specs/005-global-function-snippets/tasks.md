@@ -28,10 +28,10 @@
 
 ### Implementation for User Story 1
 
-- [ ] T001 [P] [US1] Create OR snippet in `sublime-aviutl-script/snippet/function/OR.sublime-snippet` — scope: `source.lua.aviutl-script`, trigger: `OR`, expansion: `OR(${1:a},${2:b})$0`, description: `OR,AND,XORのビット演算をします。`
-- [ ] T002 [P] [US1] Create AND snippet in `sublime-aviutl-script/snippet/function/AND.sublime-snippet` — scope: `source.lua.aviutl-script`, trigger: `AND`, expansion: `AND(${1:a},${2:b})$0`, description: `OR,AND,XORのビット演算をします。`
-- [ ] T003 [P] [US1] Create XOR snippet in `sublime-aviutl-script/snippet/function/XOR.sublime-snippet` — scope: `source.lua.aviutl-script`, trigger: `XOR`, expansion: `XOR(${1:a},${2:b})$0`, description: `OR,AND,XORのビット演算をします。`
-- [ ] T004 [US1] Add OR, AND, XOR entries to `vscode-aviutl-script/snippets/aviutl-script.code-snippets` — prefix/body/description matching the Sublime snippets above
+- [x] T001 [P] [US1] Create OR snippet in `sublime-aviutl-script/snippet/function/OR.sublime-snippet` — scope: `source.lua.aviutl-script`, trigger: `OR`, expansion: `OR(${1:a},${2:b})$0`, description: `OR,AND,XORのビット演算をします。`
+- [x] T002 [P] [US1] Create AND snippet in `sublime-aviutl-script/snippet/function/AND.sublime-snippet` — scope: `source.lua.aviutl-script`, trigger: `AND`, expansion: `AND(${1:a},${2:b})$0`, description: `OR,AND,XORのビット演算をします。`
+- [x] T003 [P] [US1] Create XOR snippet in `sublime-aviutl-script/snippet/function/XOR.sublime-snippet` — scope: `source.lua.aviutl-script`, trigger: `XOR`, expansion: `XOR(${1:a},${2:b})$0`, description: `OR,AND,XORのビット演算をします。`
+- [x] T004 [US1] Add OR, AND, XOR entries to `vscode-aviutl-script/snippets/aviutl-script.code-snippets` — prefix/body/description matching the Sublime snippets above
 
 **Checkpoint**: OR, AND, XOR snippets functional in both editors
 
@@ -45,8 +45,8 @@
 
 ### Implementation for User Story 2
 
-- [ ] T005 [US2] Create SHIFT snippet in `sublime-aviutl-script/snippet/function/SHIFT.sublime-snippet` — scope: `source.lua.aviutl-script`, trigger: `SHIFT`, expansion: `SHIFT(${1:a},${2:b})$0`, description: `算術シフトをします。`
-- [ ] T006 [US2] Add SHIFT entry to `vscode-aviutl-script/snippets/aviutl-script.code-snippets` — prefix/body/description matching the Sublime snippet above
+- [x] T005 [US2] Create SHIFT snippet in `sublime-aviutl-script/snippet/function/SHIFT.sublime-snippet` — scope: `source.lua.aviutl-script`, trigger: `SHIFT`, expansion: `SHIFT(${1:a},${2:b})$0`, description: `算術シフトをします。`
+- [x] T006 [US2] Add SHIFT entry to `vscode-aviutl-script/snippets/aviutl-script.code-snippets` — prefix/body/description matching the Sublime snippet above
 
 **Checkpoint**: SHIFT snippet functional in both editors
 
@@ -60,8 +60,8 @@
 
 ### Implementation for User Story 3
 
-- [ ] T007 [US3] Create debug_print snippet in `sublime-aviutl-script/snippet/function/debug_print.sublime-snippet` — scope: `source.lua.aviutl-script`, trigger: `debug_print`, expansion: `debug_print(${1:str})$0`, description: `デバック用の表示に使用します。`
-- [ ] T008 [US3] Add debug_print entry to `vscode-aviutl-script/snippets/aviutl-script.code-snippets` — prefix/body/description matching the Sublime snippet above
+- [x] T007 [US3] Create debug_print snippet in `sublime-aviutl-script/snippet/function/debug_print.sublime-snippet` — scope: `source.lua.aviutl-script`, trigger: `debug_print`, expansion: `debug_print(${1:str})$0`, description: `デバック用の表示に使用します。`
+- [x] T008 [US3] Add debug_print entry to `vscode-aviutl-script/snippets/aviutl-script.code-snippets` — prefix/body/description matching the Sublime snippet above
 
 **Checkpoint**: debug_print snippet functional in both editors
 
@@ -71,7 +71,7 @@
 
 **Purpose**: Regression check and final validation
 
-- [ ] T009 Run `vscode-tmgrammar-test` to confirm no grammar regressions in `vscode-aviutl-script/`
+- [x] T009 Run `vscode-tmgrammar-test` to confirm no grammar regressions in `vscode-aviutl-script/`
 
 ---
 
