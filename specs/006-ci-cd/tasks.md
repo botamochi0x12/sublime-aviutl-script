@@ -19,7 +19,7 @@
 
 **Purpose**: Create the directory structure for GitHub Actions
 
-- [ ] T001 Create `.github/workflows/` directory at repository root
+- [x] T001 Create `.github/workflows/` directory at repository root
 
 ---
 
