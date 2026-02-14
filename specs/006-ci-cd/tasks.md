@@ -31,7 +31,7 @@
 
 ### Implementation for User Story 1
 
-- [ ] T002 [US1] Create workflow file `.github/workflows/ci.yml` with `test` job: triggers on `pull_request` targeting `master` and `push` to `master`; runs `checkout`, `setup-node` (lts/*), `npm ci`, and `npm test` with `working-directory: vscode-aviutl-script`
+- [x] T002 [US1] Create workflow file `.github/workflows/ci.yml` with `test` job: triggers on `pull_request` targeting `master` and `push` to `master`; runs `checkout`, `setup-node` (lts/*), `npm ci`, and `npm test` with `working-directory: vscode-aviutl-script`
 
 **Checkpoint**: After pushing this branch and opening a PR, the `test` job should run and report grammar test results.
 
