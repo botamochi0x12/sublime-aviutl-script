@@ -7,6 +7,7 @@
     { "include": "#aviutl-functions" },
     { "include": "#obj-mutable-properties" },
     { "include": "#obj-readonly-properties" },
+    { "include": "#obj-methods" },
     { "include": "source.lua" }
   ],
   "repository": {
@@ -35,6 +36,14 @@
         "1": { "name": "constant.language.aviutl-script support.constant.builtin.aviutl-script" },
         "2": { "name": "punctuation.accessor.dot.aviutl-script" },
         "3": { "name": "entity.name.constant.aviutl-script" }
+      }
+    },
+    "obj-methods": {
+      "match": "\\b(obj)\\b(\\.)(mes|effect|rand|draw|drawpoly|load|setfont|filter|setanchor|interpolation|getaudio|setoption|getoption|getvalue|getinfo|copybuffer|getpixel|putpixel|copypixel|pixeloption|getpixeldata|putpixeldata)\\b",
+      "captures": {
+        "1": { "name": "constant.language.aviutl-script support.constant.builtin.aviutl-script" },
+        "2": { "name": "punctuation.accessor.dot.aviutl-script" },
+        "3": { "name": "support.function.library.aviutl-script" }
       }
     }
   }
