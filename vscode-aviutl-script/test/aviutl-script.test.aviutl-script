@@ -50,41 +50,41 @@ debug_print(msg)
 
 obj.ox
 -- <- constant.language.aviutl-script support.constant.builtin.aviutl-script
---  ^ punctuation.accessor.dot.aviutl-script
---   ^^ variable.other.aviutl-script
+-- ^ punctuation.accessor.dot.aviutl-script
+--  ^^ variable.other.aviutl-script
 
 obj.oy
---   ^^ variable.other.aviutl-script
+--  ^^ variable.other.aviutl-script
 
 obj.oz
---   ^^ variable.other.aviutl-script
+--  ^^ variable.other.aviutl-script
 
 obj.zoom
---   ^^^^ variable.other.aviutl-script
+--  ^^^^ variable.other.aviutl-script
 
 obj.alpha
---   ^^^^^ variable.other.aviutl-script
+--  ^^^^^ variable.other.aviutl-script
 
 obj.aspect
---   ^^^^^^ variable.other.aviutl-script
+--  ^^^^^^ variable.other.aviutl-script
 
 obj.rx
---   ^^ variable.other.aviutl-script
+--  ^^ variable.other.aviutl-script
 
 obj.ry
---   ^^ variable.other.aviutl-script
+--  ^^ variable.other.aviutl-script
 
 obj.rz
---   ^^ variable.other.aviutl-script
+--  ^^ variable.other.aviutl-script
 
 obj.cx
---   ^^ variable.other.aviutl-script
+--  ^^ variable.other.aviutl-script
 
 obj.cy
---   ^^ variable.other.aviutl-script
+--  ^^ variable.other.aviutl-script
 
 obj.cz
---   ^^ variable.other.aviutl-script
+--  ^^ variable.other.aviutl-script
 
 -- ==========================================================================
 -- T011: obj.read-only properties
@@ -92,77 +92,77 @@ obj.cz
 
 obj.w
 -- <- constant.language.aviutl-script support.constant.builtin.aviutl-script
---  ^ punctuation.accessor.dot.aviutl-script
---   ^ entity.name.constant.aviutl-script
+-- ^ punctuation.accessor.dot.aviutl-script
+--  ^ entity.name.constant.aviutl-script
 
 obj.h
---   ^ entity.name.constant.aviutl-script
+--  ^ entity.name.constant.aviutl-script
 
 obj.screen_w
---   ^^^^^^^^ entity.name.constant.aviutl-script
+--  ^^^^^^^^ entity.name.constant.aviutl-script
 
 obj.screen_h
---   ^^^^^^^^ entity.name.constant.aviutl-script
+--  ^^^^^^^^ entity.name.constant.aviutl-script
 
 obj.index
---   ^^^^^ entity.name.constant.aviutl-script
+--  ^^^^^ entity.name.constant.aviutl-script
 
 obj.num
---   ^^^ entity.name.constant.aviutl-script
+--  ^^^ entity.name.constant.aviutl-script
 
 obj.time
---   ^^^^ entity.name.constant.aviutl-script
+--  ^^^^ entity.name.constant.aviutl-script
 
 obj.totaltime
---   ^^^^^^^^^ entity.name.constant.aviutl-script
+--  ^^^^^^^^^ entity.name.constant.aviutl-script
 
 obj.frame
---   ^^^^^ entity.name.constant.aviutl-script
+--  ^^^^^ entity.name.constant.aviutl-script
 
 obj.totalframe
---   ^^^^^^^^^^ entity.name.constant.aviutl-script
+--  ^^^^^^^^^^ entity.name.constant.aviutl-script
 
 obj.framerate
---   ^^^^^^^^^ entity.name.constant.aviutl-script
+--  ^^^^^^^^^ entity.name.constant.aviutl-script
 
 obj.x
---   ^ entity.name.constant.aviutl-script
+--  ^ entity.name.constant.aviutl-script
 
 obj.y
---   ^ entity.name.constant.aviutl-script
+--  ^ entity.name.constant.aviutl-script
 
 obj.z
---   ^ entity.name.constant.aviutl-script
+--  ^ entity.name.constant.aviutl-script
 
 obj.layer
---   ^^^^^ entity.name.constant.aviutl-script
+--  ^^^^^ entity.name.constant.aviutl-script
 
 obj.check0
---   ^^^^^^ entity.name.constant.aviutl-script
+--  ^^^^^^ entity.name.constant.aviutl-script
 
 obj.track0
---   ^^^^^^ entity.name.constant.aviutl-script
+--  ^^^^^^ entity.name.constant.aviutl-script
 
 obj.track1
---   ^^^^^^ entity.name.constant.aviutl-script
+--  ^^^^^^ entity.name.constant.aviutl-script
 
 obj.track2
---   ^^^^^^ entity.name.constant.aviutl-script
+--  ^^^^^^ entity.name.constant.aviutl-script
 
 obj.track3
---   ^^^^^^ entity.name.constant.aviutl-script
+--  ^^^^^^ entity.name.constant.aviutl-script
 
 obj.color
---   ^^^^^ entity.name.constant.aviutl-script
+--  ^^^^^ entity.name.constant.aviutl-script
 
 obj.dialog
---   ^^^^^^ entity.name.constant.aviutl-script
+--  ^^^^^^ entity.name.constant.aviutl-script
 
 obj.file
---   ^^^^ entity.name.constant.aviutl-script
+--  ^^^^ entity.name.constant.aviutl-script
 
 obj.param
---   ^^^^^ entity.name.constant.aviutl-script
+--  ^^^^^ entity.name.constant.aviutl-script
 
 -- ==========================================================================
 -- T012: obj.methods
@@ -170,68 +170,68 @@ obj.param
 
 obj.mes
 -- <- constant.language.aviutl-script support.constant.builtin.aviutl-script
---  ^ punctuation.accessor.dot.aviutl-script
---   ^^^ support.function.library.aviutl-script
+-- ^ punctuation.accessor.dot.aviutl-script
+--  ^^^ support.function.library.aviutl-script
 
 obj.draw
---   ^^^^ support.function.library.aviutl-script
+--  ^^^^ support.function.library.aviutl-script
 
 obj.load
---   ^^^^ support.function.library.aviutl-script
+--  ^^^^ support.function.library.aviutl-script
 
 obj.effect
---   ^^^^^^ support.function.library.aviutl-script
+--  ^^^^^^ support.function.library.aviutl-script
 
 obj.rand
---   ^^^^ support.function.library.aviutl-script
+--  ^^^^ support.function.library.aviutl-script
 
 obj.drawpoly
---   ^^^^^^^^ support.function.library.aviutl-script
+--  ^^^^^^^^ support.function.library.aviutl-script
 
 obj.setfont
---   ^^^^^^^ support.function.library.aviutl-script
+--  ^^^^^^^ support.function.library.aviutl-script
 
 obj.filter
---   ^^^^^^ support.function.library.aviutl-script
+--  ^^^^^^ support.function.library.aviutl-script
 
 obj.setanchor
---   ^^^^^^^^^ support.function.library.aviutl-script
+--  ^^^^^^^^^ support.function.library.aviutl-script
 
 obj.interpolation
---   ^^^^^^^^^^^^^ support.function.library.aviutl-script
+--  ^^^^^^^^^^^^^ support.function.library.aviutl-script
 
 obj.getaudio
---   ^^^^^^^^ support.function.library.aviutl-script
+--  ^^^^^^^^ support.function.library.aviutl-script
 
 obj.setoption
---   ^^^^^^^^^ support.function.library.aviutl-script
+--  ^^^^^^^^^ support.function.library.aviutl-script
 
 obj.getoption
---   ^^^^^^^^^ support.function.library.aviutl-script
+--  ^^^^^^^^^ support.function.library.aviutl-script
 
 obj.getvalue
---   ^^^^^^^^ support.function.library.aviutl-script
+--  ^^^^^^^^ support.function.library.aviutl-script
 
 obj.getinfo
---   ^^^^^^^ support.function.library.aviutl-script
+--  ^^^^^^^ support.function.library.aviutl-script
 
 obj.copybuffer
---   ^^^^^^^^^^ support.function.library.aviutl-script
+--  ^^^^^^^^^^ support.function.library.aviutl-script
 
 obj.getpixel
---   ^^^^^^^^ support.function.library.aviutl-script
+--  ^^^^^^^^ support.function.library.aviutl-script
 
 obj.putpixel
---   ^^^^^^^^ support.function.library.aviutl-script
+--  ^^^^^^^^ support.function.library.aviutl-script
 
 obj.copypixel
---   ^^^^^^^^^ support.function.library.aviutl-script
+--  ^^^^^^^^^ support.function.library.aviutl-script
 
 obj.pixeloption
---   ^^^^^^^^^^^ support.function.library.aviutl-script
+--  ^^^^^^^^^^^ support.function.library.aviutl-script
 
 obj.getpixeldata
---   ^^^^^^^^^^^^ support.function.library.aviutl-script
+--  ^^^^^^^^^^^^ support.function.library.aviutl-script
 
 obj.putpixeldata
---   ^^^^^^^^^^^^ support.function.library.aviutl-script
+--  ^^^^^^^^^^^^ support.function.library.aviutl-script

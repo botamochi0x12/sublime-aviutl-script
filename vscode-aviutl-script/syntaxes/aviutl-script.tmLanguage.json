@@ -5,6 +5,7 @@
   "patterns": [
     { "include": "#section-label" },
     { "include": "#aviutl-functions" },
+    { "include": "#obj-mutable-properties" },
     { "include": "source.lua" }
   ],
   "repository": {
@@ -18,6 +19,14 @@
     "aviutl-functions": {
       "match": "\\b(OR|AND|XOR|RGB|HSV|SHIFT|debug_print)\\b",
       "name": "support.function.library.aviutl-script"
+    },
+    "obj-mutable-properties": {
+      "match": "\\b(obj)\\b(\\.)(ox|oy|oz|zoom|alpha|aspect|rx|ry|rz|cx|cy|cz)\\b",
+      "captures": {
+        "1": { "name": "constant.language.aviutl-script support.constant.builtin.aviutl-script" },
+        "2": { "name": "punctuation.accessor.dot.aviutl-script" },
+        "3": { "name": "variable.other.aviutl-script" }
+      }
     }
   }
 }
