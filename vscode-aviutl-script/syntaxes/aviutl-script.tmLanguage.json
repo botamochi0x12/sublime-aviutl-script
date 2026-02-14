@@ -6,6 +6,7 @@
     { "include": "#section-label" },
     { "include": "#aviutl-functions" },
     { "include": "#obj-mutable-properties" },
+    { "include": "#obj-readonly-properties" },
     { "include": "source.lua" }
   ],
   "repository": {
@@ -26,6 +27,14 @@
         "1": { "name": "constant.language.aviutl-script support.constant.builtin.aviutl-script" },
         "2": { "name": "punctuation.accessor.dot.aviutl-script" },
         "3": { "name": "variable.other.aviutl-script" }
+      }
+    },
+    "obj-readonly-properties": {
+      "match": "\\b(obj)\\b(\\.)(w|h|screen_w|screen_h|index|num|time|totaltime|frame|totalframe|framerate|x|y|z|layer|check0|track0|track1|track2|track3|color|dialog|file|param)\\b",
+      "captures": {
+        "1": { "name": "constant.language.aviutl-script support.constant.builtin.aviutl-script" },
+        "2": { "name": "punctuation.accessor.dot.aviutl-script" },
+        "3": { "name": "entity.name.constant.aviutl-script" }
       }
     }
   }
