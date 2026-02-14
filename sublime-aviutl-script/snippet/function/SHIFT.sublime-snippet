@@ -1,0 +1,8 @@
+<snippet>
+	<scope>source.lua.aviutl-script</scope>
+	<description>算術シフトをします。</description>
+	<content><![CDATA[
+SHIFT(${1:a},${2:b})$0
+]]></content>
+	<tabTrigger>SHIFT</tabTrigger>
+</snippet>
