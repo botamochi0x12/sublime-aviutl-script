@@ -1,0 +1,8 @@
+<snippet>
+	<scope>source.lua.aviutl-script</scope>
+	<description>デバック用の表示に使用します。</description>
+	<content><![CDATA[
+debug_print(${1:str})$0
+]]></content>
+	<tabTrigger>debug_print</tabTrigger>
+</snippet>
