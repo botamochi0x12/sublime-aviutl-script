@@ -35,6 +35,6 @@
     "vscode-tmgrammar-test": "^0.1.3"
   },
   "scripts": {
-    "test": "vscode-tmgrammar-test -s source.lua.aviutl-script -g syntaxes/aviutl-script.tmLanguage.json -t 'test/**/*.aviutl-script'"
+    "test": "vscode-tmgrammar-test -g syntaxes/aviutl-script.tmLanguage.json -g test/grammars/lua.tmLanguage.json 'test/**/*.aviutl-script'"
   }
 }
