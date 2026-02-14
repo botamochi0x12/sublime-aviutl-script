@@ -1,4 +1,15 @@
-test/
-node_modules/
-.vscode/
-*.md
+# Development files
+test/**
+node_modules/**
+.vscode/**
+
+# Build artifacts
+*.vsix
+
+# Source control and CI
+.git/**
+.github/**
+.gitignore
+
+# Tooling config
+package-lock.json

@@ -3,16 +3,42 @@
   "displayName": "AviUtl Script",
   "description": "Syntax highlighting and snippets for AviUtl scripting (Lua-based)",
   "version": "0.1.0",
+  "license": "MIT",
+  "publisher": "botamochi0x12",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/botamochi0x12/sublime-aviutl-script"
+  },
+  "homepage": "https://github.com/botamochi0x12/sublime-aviutl-script",
+  "icon": "images/icon.png",
+  "keywords": [
+    "AviUtl",
+    "Lua",
+    "aviutl-script",
+    "video editing",
+    "scripting"
+  ],
   "engines": {
     "vscode": "^1.80.0"
   },
-  "categories": ["Programming Languages"],
+  "categories": [
+    "Programming Languages"
+  ],
   "contributes": {
     "languages": [
       {
         "id": "aviutl-script",
-        "aliases": ["AviUtl Script (Lua)", "aviutl-script"],
-        "extensions": [".obj", ".anm", ".scn", ".cam", ".aviutl-script"],
+        "aliases": [
+          "AviUtl Script (Lua)",
+          "aviutl-script"
+        ],
+        "extensions": [
+          ".obj",
+          ".anm",
+          ".scn",
+          ".cam",
+          ".aviutl-script"
+        ],
         "firstLine": "^-- AviUtl Script --",
         "configuration": "./language-configuration.json"
       }
@@ -32,9 +58,11 @@
     ]
   },
   "devDependencies": {
+    "@vscode/vsce": "^3.7.1",
     "vscode-tmgrammar-test": "^0.1.3"
   },
   "scripts": {
+    "vscode:prepublish": "npm test",
     "test": "vscode-tmgrammar-test -g syntaxes/aviutl-script.tmLanguage.json -g test/grammars/lua.tmLanguage.json 'test/**/*.aviutl-script'"
   }
 }
