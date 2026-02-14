@@ -19,10 +19,10 @@
 
 **Purpose**: Project initialization — create the VS Code extension directory structure and configure dev tooling
 
-- [ ] T001 Create `vscode-aviutl-script/` directory structure per plan.md: `syntaxes/`, `snippets/`, `test/`
-- [ ] T002 Create `vscode-aviutl-script/package.json` with extension manifest per contracts/package-json-schema.md (language registration, grammar, snippets contributions, devDependencies, test script)
-- [ ] T003 Run `npm install` in `vscode-aviutl-script/` to install `vscode-tmgrammar-test` dev dependency
-- [ ] T004 [P] Create `vscode-aviutl-script/.vscodeignore` excluding `test/`, `node_modules/`, and dev files from VSIX package
+- [X] T001 Create `vscode-aviutl-script/` directory structure per plan.md: `syntaxes/`, `snippets/`, `test/`
+- [X] T002 Create `vscode-aviutl-script/package.json` with extension manifest per contracts/package-json-schema.md (language registration, grammar, snippets contributions, devDependencies, test script)
+- [X] T003 Run `npm install` in `vscode-aviutl-script/` to install `vscode-tmgrammar-test` dev dependency
+- [X] T004 [P] Create `vscode-aviutl-script/.vscodeignore` excluding `test/`, `node_modules/`, and dev files from VSIX package
 
 ---
 
@@ -32,9 +32,9 @@
 
 **CRITICAL**: No user story work can begin until this phase is complete
 
-- [ ] T005 Create minimal `vscode-aviutl-script/syntaxes/aviutl-script.tmLanguage.json` with `$schema`, `name`, `scopeName` (`source.lua.aviutl-script`), empty `patterns` array with only `{ "include": "source.lua" }`, and empty `repository` object
-- [ ] T006 Create `vscode-aviutl-script/test/aviutl-script.test.aviutl-script` with test file header (`-- SYNTAX TEST "source.lua.aviutl-script"`) and a single Lua baseline assertion (e.g., verify a Lua comment scopes as `comment.line.double-dash.lua`)
-- [ ] T007 Run `npm test` in `vscode-aviutl-script/` to verify the test infrastructure works (baseline Lua assertion passes)
+- [X] T005 Create minimal `vscode-aviutl-script/syntaxes/aviutl-script.tmLanguage.json` with `$schema`, `name`, `scopeName` (`source.lua.aviutl-script`), empty `patterns` array with only `{ "include": "source.lua" }`, and empty `repository` object
+- [X] T006 Create `vscode-aviutl-script/test/aviutl-script.test.aviutl-script` with test file header (`-- SYNTAX TEST "source.lua.aviutl-script"`) and a single Lua baseline assertion (e.g., verify a Lua comment scopes as `comment.line.double-dash.lua`)
+- [X] T007 Run `npm test` in `vscode-aviutl-script/` to verify the test infrastructure works (baseline Lua assertion passes)
 
 **Checkpoint**: Test infrastructure works — TDD grammar development can now begin
 
@@ -50,25 +50,25 @@
 
 > **NOTE: Write these tests FIRST, ensure they FAIL before implementation (Red phase)**
 
-- [ ] T008 [P] [US1] Write grammar test assertions for section labels (`@label_name`) in `vscode-aviutl-script/test/aviutl-script.test.aviutl-script`: assert `@` scopes as `punctuation.definition.keyword.aviutl-script keyword.declaration.extends.aviutl-script`, label name scopes as `entity.name.label.aviutl-script` (spec FR-007)
-- [ ] T009 [P] [US1] Write grammar test assertions for AviUtl global functions (`OR`, `AND`, `XOR`, `RGB`, `HSV`, `SHIFT`, `debug_print`) in `vscode-aviutl-script/test/aviutl-script.test.aviutl-script`: assert each scopes as `support.function.library.aviutl-script` (spec FR-003)
-- [ ] T010 [P] [US1] Write grammar test assertions for `obj.` mutable properties (`ox`, `oy`, `oz`, `zoom`, `alpha`, `aspect`, `rx`, `ry`, `rz`, `cx`, `cy`, `cz`) in `vscode-aviutl-script/test/aviutl-script.test.aviutl-script`: assert `obj` scopes as `constant.language.aviutl-script support.constant.builtin.aviutl-script`, `.` scopes as `punctuation.accessor.dot.aviutl-script`, property scopes as `variable.other.aviutl-script` (spec FR-004)
-- [ ] T011 [P] [US1] Write grammar test assertions for `obj.` read-only properties (`w`, `h`, `screen_w`, `screen_h`, `time`, `frame`, `totalframe`, `framerate`, `x`, `y`, `z`, etc.) in `vscode-aviutl-script/test/aviutl-script.test.aviutl-script`: assert property scopes as `entity.name.constant.aviutl-script` (spec FR-005)
-- [ ] T012 [P] [US1] Write grammar test assertions for `obj.` methods (`mes`, `draw`, `load`, `effect`, `rand`, `drawpoly`, `setfont`, `filter`, `setanchor`, `interpolation`, `getaudio`, `setoption`, `getoption`, `getvalue`, `getinfo`, `copybuffer`, `getpixel`, `putpixel`, `copypixel`, `pixeloption`, `getpixeldata`, `putpixeldata`) in `vscode-aviutl-script/test/aviutl-script.test.aviutl-script`: assert method scopes as `support.function.library.aviutl-script` (spec FR-006)
-- [ ] T013 [US1] Run `npm test` to verify ALL US1 test assertions FAIL (Red phase confirmation)
+- [X] T008 [P] [US1] Write grammar test assertions for section labels (`@label_name`) in `vscode-aviutl-script/test/aviutl-script.test.aviutl-script`: assert `@` scopes as `punctuation.definition.keyword.aviutl-script keyword.declaration.extends.aviutl-script`, label name scopes as `entity.name.label.aviutl-script` (spec FR-007)
+- [X] T009 [P] [US1] Write grammar test assertions for AviUtl global functions (`OR`, `AND`, `XOR`, `RGB`, `HSV`, `SHIFT`, `debug_print`) in `vscode-aviutl-script/test/aviutl-script.test.aviutl-script`: assert each scopes as `support.function.library.aviutl-script` (spec FR-003)
+- [X] T010 [P] [US1] Write grammar test assertions for `obj.` mutable properties (`ox`, `oy`, `oz`, `zoom`, `alpha`, `aspect`, `rx`, `ry`, `rz`, `cx`, `cy`, `cz`) in `vscode-aviutl-script/test/aviutl-script.test.aviutl-script`: assert `obj` scopes as `constant.language.aviutl-script support.constant.builtin.aviutl-script`, `.` scopes as `punctuation.accessor.dot.aviutl-script`, property scopes as `variable.other.aviutl-script` (spec FR-004)
+- [X] T011 [P] [US1] Write grammar test assertions for `obj.` read-only properties (`w`, `h`, `screen_w`, `screen_h`, `time`, `frame`, `totalframe`, `framerate`, `x`, `y`, `z`, etc.) in `vscode-aviutl-script/test/aviutl-script.test.aviutl-script`: assert property scopes as `entity.name.constant.aviutl-script` (spec FR-005)
+- [X] T012 [P] [US1] Write grammar test assertions for `obj.` methods (`mes`, `draw`, `load`, `effect`, `rand`, `drawpoly`, `setfont`, `filter`, `setanchor`, `interpolation`, `getaudio`, `setoption`, `getoption`, `getvalue`, `getinfo`, `copybuffer`, `getpixel`, `putpixel`, `copypixel`, `pixeloption`, `getpixeldata`, `putpixeldata`) in `vscode-aviutl-script/test/aviutl-script.test.aviutl-script`: assert method scopes as `support.function.library.aviutl-script` (spec FR-006)
+- [X] T013 [US1] Run `npm test` to verify ALL US1 test assertions FAIL (Red phase confirmation)
 
 ### Implementation for User Story 1 (Green phase)
 
-- [ ] T014 [US1] Add `section-label` repository entry to `vscode-aviutl-script/syntaxes/aviutl-script.tmLanguage.json` per data-model.md: pattern `^\s*(\@)(\S+)(?=\s|-|$)`, captures for `@` and label name, and add `#section-label` include to top-level patterns array (before `source.lua`)
-- [ ] T015 [US1] Run `npm test` to verify section label assertions pass (Green phase for T008)
-- [ ] T016 [US1] Add `aviutl-functions` repository entry to `vscode-aviutl-script/syntaxes/aviutl-script.tmLanguage.json` per data-model.md: pattern `\b(OR|AND|XOR|RGB|HSV|SHIFT|debug_print)\b`, name `support.function.library.aviutl-script`, and add `#aviutl-functions` include to top-level patterns array
-- [ ] T017 [US1] Run `npm test` to verify global function assertions pass (Green phase for T009)
-- [ ] T018 [US1] Add `obj-mutable-properties` repository entry to `vscode-aviutl-script/syntaxes/aviutl-script.tmLanguage.json` per data-model.md: pattern `\b(obj)\b(\.)(ox|oy|oz|zoom|alpha|aspect|rx|ry|rz|cx|cy|cz)\b`, 3 capture groups with scopes per contracts/grammar-schema.md, and add `#obj-mutable-properties` include to top-level patterns array
-- [ ] T019 [US1] Run `npm test` to verify mutable property assertions pass (Green phase for T010)
-- [ ] T020 [US1] Add `obj-readonly-properties` repository entry to `vscode-aviutl-script/syntaxes/aviutl-script.tmLanguage.json` per data-model.md: pattern with all read-only property names, 3 capture groups, and add `#obj-readonly-properties` include to top-level patterns array
-- [ ] T021 [US1] Run `npm test` to verify read-only property assertions pass (Green phase for T011)
-- [ ] T022 [US1] Add `obj-methods` repository entry to `vscode-aviutl-script/syntaxes/aviutl-script.tmLanguage.json` per data-model.md: pattern with all method names, 3 capture groups, and add `#obj-methods` include to top-level patterns array
-- [ ] T023 [US1] Run `npm test` to verify ALL US1 assertions pass (complete Green phase for T012 + full regression)
+- [X] T014 [US1] Add `section-label` repository entry to `vscode-aviutl-script/syntaxes/aviutl-script.tmLanguage.json` per data-model.md: pattern `^\s*(\@)(\S+)(?=\s|-|$)`, captures for `@` and label name, and add `#section-label` include to top-level patterns array (before `source.lua`)
+- [X] T015 [US1] Run `npm test` to verify section label assertions pass (Green phase for T008)
+- [X] T016 [US1] Add `aviutl-functions` repository entry to `vscode-aviutl-script/syntaxes/aviutl-script.tmLanguage.json` per data-model.md: pattern `\b(OR|AND|XOR|RGB|HSV|SHIFT|debug_print)\b`, name `support.function.library.aviutl-script`, and add `#aviutl-functions` include to top-level patterns array
+- [X] T017 [US1] Run `npm test` to verify global function assertions pass (Green phase for T009)
+- [X] T018 [US1] Add `obj-mutable-properties` repository entry to `vscode-aviutl-script/syntaxes/aviutl-script.tmLanguage.json` per data-model.md: pattern `\b(obj)\b(\.)(ox|oy|oz|zoom|alpha|aspect|rx|ry|rz|cx|cy|cz)\b`, 3 capture groups with scopes per contracts/grammar-schema.md, and add `#obj-mutable-properties` include to top-level patterns array
+- [X] T019 [US1] Run `npm test` to verify mutable property assertions pass (Green phase for T010)
+- [X] T020 [US1] Add `obj-readonly-properties` repository entry to `vscode-aviutl-script/syntaxes/aviutl-script.tmLanguage.json` per data-model.md: pattern with all read-only property names, 3 capture groups, and add `#obj-readonly-properties` include to top-level patterns array
+- [X] T021 [US1] Run `npm test` to verify read-only property assertions pass (Green phase for T011)
+- [X] T022 [US1] Add `obj-methods` repository entry to `vscode-aviutl-script/syntaxes/aviutl-script.tmLanguage.json` per data-model.md: pattern with all method names, 3 capture groups, and add `#obj-methods` include to top-level patterns array
+- [X] T023 [US1] Run `npm test` to verify ALL US1 assertions pass (complete Green phase for T012 + full regression)
 
 **Checkpoint**: User Story 1 is fully functional — AviUtl syntax highlighting works. This is the MVP.
 
@@ -82,11 +82,11 @@
 
 ### Implementation for User Story 2
 
-- [ ] T024 [P] [US2] Convert the 1 environment template snippet (`!env` / `AviUtl.sublime-snippet`) from Sublime XML to VS Code JSON entry in `vscode-aviutl-script/snippets/aviutl-script.code-snippets`
-- [ ] T025 [P] [US2] Convert the 21 method snippets from `snippet/function/*.sublime-snippet` (draw, drawpoly, load, mes, effect, rand, setfont, filter, setanchor, interpolation, getaudio, getoption, getvalue, getinfo, copybuffer, getpixel, putpixel, copypixel, pixeloption, getpixeldata, putpixeldata) to VS Code JSON entries in `vscode-aviutl-script/snippets/aviutl-script.code-snippets`
-- [ ] T026 [P] [US2] Convert the 6 setoption variant snippets from `snippet/function/setoption/*.sublime-snippet` (setoption, blend, culling, antialias, billboard, shadow) to VS Code JSON entries in `vscode-aviutl-script/snippets/aviutl-script.code-snippets`
-- [ ] T027 [P] [US2] Convert the 27 property snippets from `snippet/variable/*.sublime-snippet` (12 mutable: ox, oy, oz, zoom, alpha, aspect, rx, ry, rz, cx, cy, cz; 15 read-only: w, h, screen_w, screen_h, frame, framerate, time, totaltime, totalframe, index, num, layer, x, y, z) to VS Code JSON entries in `vscode-aviutl-script/snippets/aviutl-script.code-snippets` (note: `totalframeme.sublime-snippet` is a filename typo — content and trigger are `totalframe`)
-- [ ] T028 [US2] Verify snippet count totals exactly 55 (1 + 21 + 6 + 27) in `vscode-aviutl-script/snippets/aviutl-script.code-snippets` and validate JSON syntax
+- [X] T024 [P] [US2] Convert the 1 environment template snippet (`!env` / `AviUtl.sublime-snippet`) from Sublime XML to VS Code JSON entry in `vscode-aviutl-script/snippets/aviutl-script.code-snippets`
+- [X] T025 [P] [US2] Convert the 21 method snippets from `snippet/function/*.sublime-snippet` (draw, drawpoly, load, mes, effect, rand, setfont, filter, setanchor, interpolation, getaudio, getoption, getvalue, getinfo, copybuffer, getpixel, putpixel, copypixel, pixeloption, getpixeldata, putpixeldata) to VS Code JSON entries in `vscode-aviutl-script/snippets/aviutl-script.code-snippets`
+- [X] T026 [P] [US2] Convert the 6 setoption variant snippets from `snippet/function/setoption/*.sublime-snippet` (setoption, blend, culling, antialias, billboard, shadow) to VS Code JSON entries in `vscode-aviutl-script/snippets/aviutl-script.code-snippets`
+- [X] T027 [P] [US2] Convert the 27 property snippets from `snippet/variable/*.sublime-snippet` (12 mutable: ox, oy, oz, zoom, alpha, aspect, rx, ry, rz, cx, cy, cz; 15 read-only: w, h, screen_w, screen_h, frame, framerate, time, totaltime, totalframe, index, num, layer, x, y, z) to VS Code JSON entries in `vscode-aviutl-script/snippets/aviutl-script.code-snippets` (note: `totalframeme.sublime-snippet` is a filename typo — content and trigger are `totalframe`)
+- [X] T028 [US2] Verify snippet count totals exactly 55 (1 + 21 + 6 + 27) in `vscode-aviutl-script/snippets/aviutl-script.code-snippets` and validate JSON syntax
 
 **Checkpoint**: User Story 2 is complete — all 55 snippets are available in VS Code
 
@@ -100,7 +100,7 @@
 
 ### Implementation for User Story 3
 
-- [ ] T029 [US3] Create `vscode-aviutl-script/language-configuration.json` with Lua language features per data-model.md and research R-005: line comment `--`, block comment `--[[ ]]`, brackets `(){}[]`, auto-closing pairs with `notIn` guards, surrounding pairs, indentation rules for Lua block keywords (increase: `function`, `if.*then`, `else`, `elseif.*then`, `for.*do`, `while.*do`, `repeat`; decrease: `end`, `else`, `elseif`, `until`)
+- [X] T029 [US3] Create `vscode-aviutl-script/language-configuration.json` with Lua language features per data-model.md and research R-005: line comment `--`, block comment `--[[ ]]`, brackets `(){}[]`, auto-closing pairs with `notIn` guards, surrounding pairs, indentation rules for Lua block keywords (increase: `function`, `if.*then`, `else`, `elseif.*then`, `for.*do`, `while.*do`, `repeat`; decrease: `end`, `else`, `elseif`, `until`)
 
 **Checkpoint**: User Story 3 is complete — Lua editing features work in AviUtl script files
 
@@ -110,9 +110,9 @@
 
 **Purpose**: Final validation and packaging
 
-- [ ] T030 Run full `npm test` in `vscode-aviutl-script/` to verify all grammar tests still pass (regression check)
-- [ ] T031 Verify `package.json` manifest completeness: all file paths in `contributes` point to existing files, `engines.vscode` is `^1.80.0`, all 5 file extensions registered, `firstLine` pattern set
-- [ ] T032 Run quickstart.md validation: follow the setup and development workflow steps, verify `npm install`, `npm test`, and manual Extension Development Host (F5) all work
+- [X] T030 Run full `npm test` in `vscode-aviutl-script/` to verify all grammar tests still pass (regression check)
+- [X] T031 Verify `package.json` manifest completeness: all file paths in `contributes` point to existing files, `engines.vscode` is `^1.80.0`, all 5 file extensions registered, `firstLine` pattern set
+- [X] T032 Run quickstart.md validation: follow the setup and development workflow steps, verify `npm install`, `npm test`, and manual Extension Development Host (F5) all work
 
 ---
 
