@@ -1,0 +1,9 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "AviUtl Script (Lua)",
+  "scopeName": "source.lua.aviutl-script",
+  "patterns": [
+    { "include": "source.lua" }
+  ],
+  "repository": {}
+}
