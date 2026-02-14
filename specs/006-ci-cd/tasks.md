@@ -47,7 +47,7 @@
 
 ### Implementation for User Story 3
 
-- [ ] T003 [US3] Add `package` job to `.github/workflows/ci.yml`: runs `checkout`, `setup-node` (lts/*), `npm ci`, `npx vsce package`, and `actions/upload-artifact` for the `.vsix` file; `working-directory: vscode-aviutl-script`
+- [x] T003 [US3] Add `package` job to `.github/workflows/ci.yml`: runs `checkout`, `setup-node` (lts/*), `npm ci`, `npx vsce package`, and `actions/upload-artifact` for the `.vsix` file; `working-directory: vscode-aviutl-script`
 
 **Checkpoint**: Both `test` and `package` jobs run in parallel on PRs and pushes to `master`. The `.vsix` artifact is downloadable from the GitHub Actions run.
 
