@@ -57,7 +57,7 @@
 
 **Purpose**: Add workflow metadata and give the workflow a descriptive name
 
-- [ ] T004 Add workflow `name: CI` and descriptive job names (`Grammar Tests`, `Package Extension`) to `.github/workflows/ci.yml`
+- [x] T004 Add workflow `name: CI` and descriptive job names (`Grammar Tests`, `Package Extension`) to `.github/workflows/ci.yml`
 - [ ] T005 Mark implementation tasks as complete in `specs/006-ci-cd/tasks.md`
 
 ---
