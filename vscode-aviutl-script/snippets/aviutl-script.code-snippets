@@ -288,5 +288,10 @@
     "prefix": "XOR",
     "body": "XOR(${1:a},${2:b})$0",
     "description": "OR,AND,XORのビット演算をします。"
+  },
+  "SHIFT": {
+    "prefix": "SHIFT",
+    "body": "SHIFT(${1:a},${2:b})$0",
+    "description": "算術シフトをします。"
   }
 }
