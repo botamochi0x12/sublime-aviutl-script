@@ -1,0 +1,2 @@
+- [ ] include `rikky_module` functions;
+- [ ] show function usages;
