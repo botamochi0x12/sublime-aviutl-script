@@ -40,7 +40,8 @@ Run syntax tests in Sublime Text 3 via **Tools > Build** with the test file open
 
 ## Active Technologies
 - JSON (TextMate grammar, VS Code snippets, language config); Node.js for tooling/testing + VS Code Extension API (declarative — no runtime code needed); `vscode-tmgrammar-test` (dev dependency for grammar testing) (002-vscode-extension-migration)
-- N/A (static declarative extension — no runtime state) (002-vscode-extension-migration)
+- JSON (declarative extension manifest); Node.js >=20.x (tooling only) + `@vscode/vsce` (packaging CLI) (004-vscode-extension-compose)
 
 ## Recent Changes
+- 004-vscode-extension-compose: Added `@vscode/vsce` for extension packaging; Marketplace metadata, README, CHANGELOG, LICENSE, icon
 - 002-vscode-extension-migration: Added JSON (TextMate grammar, VS Code snippets, language config); Node.js for tooling/testing + VS Code Extension API (declarative — no runtime code needed); `vscode-tmgrammar-test` (dev dependency for grammar testing)
