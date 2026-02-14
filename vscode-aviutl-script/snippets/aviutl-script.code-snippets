@@ -273,5 +273,20 @@
     "prefix": "z",
     "body": "obj.z",
     "description": "表示基準座標Z(ReadOnly)"
+  },
+  "OR": {
+    "prefix": "OR",
+    "body": "OR(${1:a},${2:b})$0",
+    "description": "OR,AND,XORのビット演算をします。"
+  },
+  "AND": {
+    "prefix": "AND",
+    "body": "AND(${1:a},${2:b})$0",
+    "description": "OR,AND,XORのビット演算をします。"
+  },
+  "XOR": {
+    "prefix": "XOR",
+    "body": "XOR(${1:a},${2:b})$0",
+    "description": "OR,AND,XORのビット演算をします。"
   }
 }
