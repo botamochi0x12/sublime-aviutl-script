@@ -3,7 +3,16 @@
   "name": "AviUtl Script (Lua)",
   "scopeName": "source.lua.aviutl-script",
   "patterns": [
+    { "include": "#section-label" },
     { "include": "source.lua" }
   ],
-  "repository": {}
+  "repository": {
+    "section-label": {
+      "match": "^\\s*(\\@)(\\S+)(?=\\s|-|$)",
+      "captures": {
+        "1": { "name": "punctuation.definition.keyword.aviutl-script keyword.declaration.extends.aviutl-script" },
+        "2": { "name": "entity.name.label.aviutl-script" }
+      }
+    }
+  }
 }

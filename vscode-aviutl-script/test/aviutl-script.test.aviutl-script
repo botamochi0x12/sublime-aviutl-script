@@ -16,8 +16,8 @@
 --^ entity.name.label.aviutl-script
 
   @indented_label
--- <- punctuation.definition.keyword.aviutl-script keyword.declaration.extends.aviutl-script
---  ^ entity.name.label.aviutl-script
+--^ punctuation.definition.keyword.aviutl-script keyword.declaration.extends.aviutl-script
+-- ^ entity.name.label.aviutl-script
 
 -- ==========================================================================
 -- T009: AviUtl global functions
