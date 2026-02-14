@@ -1,0 +1,277 @@
+{
+  "AviUtl Script environment": {
+    "prefix": "!env",
+    "body": "-- AviUtl Script --",
+    "description": "AviUtl Script environment"
+  },
+  "obj.draw": {
+    "prefix": "draw",
+    "body": "obj.draw(${1:${2:ox},${3:oy},${4:oz},${5:zoom},${6:alpha},${7:rx},${8:ry},${9:rz}})$0",
+    "description": "オブジェクトを描画します。"
+  },
+  "obj.drawpoly": {
+    "prefix": "drawpoly",
+    "body": "obj.drawpoly(${1:x0},${2:y0},${3:z0}, ${4:x1},${5:y1},${6:z1}, ${7:x2},${8:y2},${9:z2}, ${10:x3},${11:y3},${12:z3}${13:,  ${14:u0},${15:v0}, ${16:u1},${17:v1}, ${18:u2},${19:v2}, ${20:u3},${21:v3},  ${22:alpha}})$0",
+    "description": "オブジェクトの任意の範囲をポリゴン描画します。"
+  },
+  "obj.load": {
+    "prefix": "load",
+    "body": "obj.load(${1:--[[type={\"画像ファイル\"=\"image\", \"動画ファイル\"=\"movie\", \"テキスト\"=\"text\", \"図形\"=\"figure\", \"フレームバッファ\"=\"framebuffer\", \"仮想バッファ\"=\"tempbuffer\"\\}--]]})$0",
+    "description": "図形や任意のファイルを読み込みます。"
+  },
+  "obj.mes": {
+    "prefix": "mes",
+    "body": "obj.mes(${1:\"str\"})$0",
+    "description": "テキストオブジェクトで、文字として表示します。"
+  },
+  "obj.effect": {
+    "prefix": "effect",
+    "body": "obj.effect(${1})",
+    "description": "指定のフィルタ効果を実行します。メディアオブジェクトのみ使用出来ます。 引数なしで呼ぶとスクリプト以降のフィルタ効果を実行します。"
+  },
+  "obj.rand": {
+    "prefix": "rand",
+    "body": "obj.rand(${1:min},${2:max},${3:seed},${4:framenum})$0",
+    "description": "乱数を発生させます。"
+  },
+  "obj.setfont": {
+    "prefix": "setfont",
+    "body": "obj.setfont(${1:fontname}, ${2:fontsize}, ${3:decorate}, ${4:col1}, ${5:col2})$0",
+    "description": "obj.load(\"text\") の対象で使用するフォントを設定します。decorate:0=装飾無し / 1=影付き文字 / 2=影付き文字(薄) / 3=縁取り文字 / 4=縁取り文字(細)"
+  },
+  "obj.filter": {
+    "prefix": "filter",
+    "body": "obj.filter(${1})",
+    "description": "フィルタ効果をスクリーン全体に適用します。"
+  },
+  "obj.setanchor": {
+    "prefix": "setanchor",
+    "body": "obj.setanchor(${1})",
+    "description": "複数のアンカーポイントを設定し、マウスドラッグで操作できるようにします。"
+  },
+  "obj.interpolation": {
+    "prefix": "interpolation",
+    "body": "obj.interpolation(${1})",
+    "description": "2点間の座標を曲線的に補間します。"
+  },
+  "obj.getaudio": {
+    "prefix": "getaudio",
+    "body": "obj.getaudio(${1})",
+    "description": "音声データを取得します。"
+  },
+  "obj.setoption": {
+    "prefix": "setoption",
+    "body": "obj.setoption(${1:name},${2:value})$0",
+    "description": "合成モード等、様々なオプションを指定します。 see also (culling|billboard|shadow|antialias|blend|drawtarget|tempbuffer)"
+  },
+  "obj.getoption": {
+    "prefix": "getoption",
+    "body": "obj.getoption(${1})",
+    "description": "オブジェクトの区間数など、オブジェクトの各種設定を取得します。"
+  },
+  "obj.getvalue": {
+    "prefix": "getvalue",
+    "body": "obj.getvalue(${1})",
+    "description": "設定ダイアログの数値など、オブジェクトの設定値を取得します。"
+  },
+  "obj.getinfo": {
+    "prefix": "getinfo",
+    "body": "obj.getinfo(${1})",
+    "description": "スクリプトの各種情報を取得します。"
+  },
+  "obj.copybuffer": {
+    "prefix": "copybuffer",
+    "body": "obj.copybuffer(${1})",
+    "description": "画像データのバッファ間コピーを行います"
+  },
+  "obj.getpixel": {
+    "prefix": "getpixel",
+    "body": "obj.getpixel(${1})",
+    "description": "ピクセルの色など、各種ピクセル情報を取得します。"
+  },
+  "obj.putpixel": {
+    "prefix": "putpixel",
+    "body": "obj.putpixel(${1})",
+    "description": "ピクセル情報を書き換えます。"
+  },
+  "obj.copypixel": {
+    "prefix": "copypixel",
+    "body": "obj.copypixel(${1})",
+    "description": "ピクセル情報をコピーします。"
+  },
+  "obj.pixeloption": {
+    "prefix": "pixeloption",
+    "body": "obj.pixeloption(${1})",
+    "description": "ピクセルの各種オプションを指定をします。"
+  },
+  "obj.getpixeldata": {
+    "prefix": "getpixeldata",
+    "body": "obj.getpixeldata(${1})",
+    "description": "外部DLLに渡すユーザーデータと画像の縦横サイズを取得します。"
+  },
+  "obj.putpixeldata": {
+    "prefix": "putpixeldata",
+    "body": "obj.putpixeldata(${1})",
+    "description": "外部DLLから受け取ったユーザーデータを現在のオブジェクトに書き込みます。"
+  },
+  "obj.setoption blend": {
+    "prefix": "blend",
+    "body": "obj.setoption(\"blend\",${1:value})$0",
+    "description": "合成モード。0=通常 / 1=加算 / 2=減算 / 3=乗算 / 4=スクリーン / 5=オーバーレイ / 6=比較(明) / 7=比較(暗) / 8=輝度 / 9=色差"
+  },
+  "obj.setoption culling": {
+    "prefix": "culling",
+    "body": "obj.setoption(\"culling\",${1:value})$0",
+    "description": "裏面を表示しない"
+  },
+  "obj.setoption antialias": {
+    "prefix": "antialias",
+    "body": "obj.setoption(\"antialias\",${1:value})$0",
+    "description": "アンチエイリアス"
+  },
+  "obj.setoption billboard": {
+    "prefix": "billboard",
+    "body": "obj.setoption(\"billboard\",${1:value})$0",
+    "description": "カメラの方を向く"
+  },
+  "obj.setoption shadow": {
+    "prefix": "shadow",
+    "body": "obj.setoption(\"shadow\",${1:value})$0",
+    "description": "シャドーの対象"
+  },
+  "obj.ox": {
+    "prefix": "ox",
+    "body": "obj.ox",
+    "description": "基準座標からの相対座標X"
+  },
+  "obj.oy": {
+    "prefix": "oy",
+    "body": "obj.oy",
+    "description": "基準座標からの相対座標Y"
+  },
+  "obj.oz": {
+    "prefix": "oz",
+    "body": "obj.oz",
+    "description": "基準座標からの相対座標Z"
+  },
+  "obj.zoom": {
+    "prefix": "zoom",
+    "body": "obj.zoom",
+    "description": "拡大率(1.0=等倍)"
+  },
+  "obj.alpha": {
+    "prefix": "alpha",
+    "body": "obj.alpha",
+    "description": "不透明度(0.0=透明/1.0=不透明)"
+  },
+  "obj.aspect": {
+    "prefix": "aspect",
+    "body": "obj.aspect",
+    "description": "アスペクト比(-1.0～1.0/プラス=横縮小/マイナス縦縮小)"
+  },
+  "obj.rx": {
+    "prefix": "rx",
+    "body": "obj.rx",
+    "description": "X軸回転角度(360.0で一回転)"
+  },
+  "obj.ry": {
+    "prefix": "ry",
+    "body": "obj.ry",
+    "description": "Y軸回転角度(360.0で一回転)"
+  },
+  "obj.rz": {
+    "prefix": "rz",
+    "body": "obj.rz",
+    "description": "Z軸回転角度(360.0で一回転)"
+  },
+  "obj.cx": {
+    "prefix": "cx",
+    "body": "obj.cx",
+    "description": "中心の相対座標X"
+  },
+  "obj.cy": {
+    "prefix": "cy",
+    "body": "obj.cy",
+    "description": "中心の相対座標Y"
+  },
+  "obj.cz": {
+    "prefix": "cz",
+    "body": "obj.cz",
+    "description": "中心の相対座標Z"
+  },
+  "obj.w": {
+    "prefix": "w",
+    "body": "obj.w",
+    "description": "画像の幅(ReadOnly)"
+  },
+  "obj.h": {
+    "prefix": "h",
+    "body": "obj.h",
+    "description": "画像の高さ(ReadOnly)"
+  },
+  "obj.screen_w": {
+    "prefix": "screen_w",
+    "body": "obj.screen_w",
+    "description": "画面の幅(ReadOnly)"
+  },
+  "obj.screen_h": {
+    "prefix": "screen_h",
+    "body": "obj.screen_h",
+    "description": "画面の高さ(ReadOnly)"
+  },
+  "obj.frame": {
+    "prefix": "frame",
+    "body": "obj.frame",
+    "description": "オブジェクトの開始フレームからの経過フレーム数(ReadOnly)"
+  },
+  "obj.framerate": {
+    "prefix": "framerate",
+    "body": "obj.framerate",
+    "description": "フレームレート(ReadOnly)"
+  },
+  "obj.time": {
+    "prefix": "time",
+    "body": "obj.time",
+    "description": "オブジェクトの開始フレームからの経過秒数(ReadOnly)"
+  },
+  "obj.totaltime": {
+    "prefix": "totaltime",
+    "body": "obj.totaltime",
+    "description": "オブジェクトの開始フレームから終了フレームまでの総秒数(ReadOnly)"
+  },
+  "obj.totalframe": {
+    "prefix": "totalframe",
+    "body": "obj.totalframe",
+    "description": "オブジェクトの開始フレームから終了フレームまでの総フレーム数(ReadOnly)"
+  },
+  "obj.index": {
+    "prefix": "index",
+    "body": "obj.index",
+    "description": "複数オブジェクト時の番号。0 ≤ obj.index ≤ obj.num-1. (ReadOnly)"
+  },
+  "obj.num": {
+    "prefix": "num",
+    "body": "obj.num",
+    "description": "複数オブジェクト時の数(1=単体オブジェクト/0=不定)。(ReadOnly)"
+  },
+  "obj.layer": {
+    "prefix": "layer",
+    "body": "obj.layer",
+    "description": "オブジェクトが配置されているレイヤー"
+  },
+  "obj.x": {
+    "prefix": "x",
+    "body": "obj.x",
+    "description": "表示基準座標X(ReadOnly)"
+  },
+  "obj.y": {
+    "prefix": "y",
+    "body": "obj.y",
+    "description": "表示基準座標Y(ReadOnly)"
+  },
+  "obj.z": {
+    "prefix": "z",
+    "body": "obj.z",
+    "description": "表示基準座標Z(ReadOnly)"
+  }
+}
