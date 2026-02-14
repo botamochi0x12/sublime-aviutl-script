@@ -293,5 +293,10 @@
     "prefix": "SHIFT",
     "body": "SHIFT(${1:a},${2:b})$0",
     "description": "算術シフトをします。"
+  },
+  "debug_print": {
+    "prefix": "debug_print",
+    "body": "debug_print(${1:str})$0",
+    "description": "デバック用の表示に使用します。"
   }
 }
