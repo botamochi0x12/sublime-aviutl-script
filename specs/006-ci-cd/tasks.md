@@ -70,8 +70,8 @@
 
 ### Implementation for User Story 4
 
-- [ ] T006 [US4] Create `.github/workflows/release.yml` with workflow name `Release`, trigger on `push: tags: ['v*']`, `permissions: contents: write`, and three jobs: `test` (Grammar Tests), `package` (Package Extension), and `release` (Create GitHub Release). The `test` job: `actions/checkout@v4`, `actions/setup-node@v4` with `node-version: lts/*`, `npm ci`, `npm test`; working-directory `vscode-aviutl-script`. The `package` job: same checkout/setup/install, then `npx vsce package`, then `actions/upload-artifact@v4` with name `aviutl-script-vsix` and path `vscode-aviutl-script/*.vsix`; working-directory `vscode-aviutl-script`. The `release` job: `needs: [test, package]`, `actions/download-artifact@v4` with name `aviutl-script-vsix`, then `softprops/action-gh-release@v2` with `generate_release_notes: true` and `files: '*.vsix'`.
-- [ ] T007 [US4] Verify `.github/workflows/release.yml` YAML syntax is valid (run `npx yaml-lint` or validate structure manually)
+- [x] T006 [US4] Create `.github/workflows/release.yml` with workflow name `Release`, trigger on `push: tags: ['v*']`, `permissions: contents: write`, and three jobs: `test` (Grammar Tests), `package` (Package Extension), and `release` (Create GitHub Release). The `test` job: `actions/checkout@v4`, `actions/setup-node@v4` with `node-version: lts/*`, `npm ci`, `npm test`; working-directory `vscode-aviutl-script`. The `package` job: same checkout/setup/install, then `npx vsce package`, then `actions/upload-artifact@v4` with name `aviutl-script-vsix` and path `vscode-aviutl-script/*.vsix`; working-directory `vscode-aviutl-script`. The `release` job: `needs: [test, package]`, `actions/download-artifact@v4` with name `aviutl-script-vsix`, then `softprops/action-gh-release@v2` with `generate_release_notes: true` and `files: '*.vsix'`.
+- [x] T007 [US4] Verify `.github/workflows/release.yml` YAML syntax is valid (run `npx yaml-lint` or validate structure manually)
 
 **Checkpoint**: After merging and pushing a `v*` tag, the release workflow should run: `test` and `package` in parallel, then `release` creates a GitHub Release with `.vsix` attached.
 
@@ -81,7 +81,7 @@
 
 **Purpose**: Final documentation updates
 
-- [ ] T008 Mark all US4 implementation tasks as complete in `specs/006-ci-cd/tasks.md`
+- [x] T008 Mark all US4 implementation tasks as complete in `specs/006-ci-cd/tasks.md`
 
 ---
 
@@ -93,15 +93,15 @@
 - **US1 (Phase 2)**: Depends on Phase 1 (directory must exist) ✅
 - **US3 (Phase 3)**: Depends on Phase 2 (workflow file must exist to add the `package` job) ✅
 - **Polish/CI (Phase 4)**: Depends on Phase 3 (all CI jobs must exist before naming them) ✅
-- **US4 (Phase 5)**: Depends on Phase 1 (`.github/workflows/` directory exists). Independent of `ci.yml` — creates a new file `release.yml`.
-- **Polish/CD (Phase 6)**: Depends on Phase 5
+- **US4 (Phase 5)**: Depends on Phase 1 (`.github/workflows/` directory exists). Independent of `ci.yml` — creates a new file `release.yml`. ✅
+- **Polish/CD (Phase 6)**: Depends on Phase 5 ✅
 
 ### User Story Dependencies
 
 - **User Story 1 (P1)**: Creates the CI workflow file with `test` job and both triggers → MVP ✅
 - **User Story 2 (P2)**: Fully satisfied by US1's trigger configuration ✅
 - **User Story 3 (P3)**: Adds the `package` job to `ci.yml` ✅
-- **User Story 4 (P4)**: Creates a NEW workflow file `release.yml` — independent of `ci.yml`
+- **User Story 4 (P4)**: Creates a NEW workflow file `release.yml` — independent of `ci.yml` ✅
 
 ### Parallel Opportunities
 
@@ -124,8 +124,8 @@
 2. T002 → Grammar tests run on PRs and pushes to master (US1 + US2 complete) ✅
 3. T003 → Packaging verification added (US3 complete) ✅
 4. T004–T005 → CI polish complete ✅
-5. T006–T007 → CD release workflow added (US4 complete)
-6. T008 → CD polish and close out
+5. T006–T007 → CD release workflow added (US4 complete) ✅
+6. T008 → CD polish and close out ✅
 
 ---
 
@@ -135,4 +135,4 @@
 - CD tasks (T006–T008) create and validate a new file `release.yml` — independent of `ci.yml`
 - US2 is a zero-task user story because the `push` trigger is part of US1's workflow configuration
 - Commit after each task per CLAUDE.md conventions
-- Total: 8 tasks across 6 phases (5 CI complete, 3 CD pending)
+- Total: 8 tasks across 6 phases (all complete)
