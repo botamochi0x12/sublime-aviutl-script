@@ -5,19 +5,19 @@
 
 ## Summary
 
-Add a GitHub Actions CI pipeline that automatically runs VS Code grammar tests (`vscode-tmgrammar-test`) on every pull request and push to `master`, and verifies VS Code extension packaging via `vsce package`. The pipeline reports results as informational status checks (non-blocking). No branch protection rules or automated publishing are in scope.
+Add a CD pipeline (GitHub Actions) that creates a GitHub Release with a `.vsix` artifact when a `v*` tag is pushed. The CI pipeline (`ci.yml`) already exists and covers grammar tests + packaging verification on PRs and main-branch pushes. This plan adds a separate `release.yml` workflow that re-runs tests, packages the extension, and publishes a GitHub Release with auto-generated release notes.
 
 ## Technical Context
 
 **Language/Version**: YAML (GitHub Actions workflow); Node.js latest LTS (for `npm test` and `vsce package`)
-**Primary Dependencies**: GitHub Actions (hosted CI); `vscode-tmgrammar-test` ^0.1.3 (existing devDep); `@vscode/vsce` ^3.7.1 (existing devDep)
+**Primary Dependencies**: `vscode-tmgrammar-test` ^0.1.3 (existing devDep); `@vscode/vsce` ^3.7.1 (existing devDep); GitHub Actions (`actions/checkout@v4`, `actions/setup-node@v4`, `actions/upload-artifact@v4`, `softprops/action-gh-release`)
 **Storage**: N/A
-**Testing**: `npm test` in `vscode-aviutl-script/` runs `vscode-tmgrammar-test`; `npx vsce package` verifies packaging
-**Target Platform**: GitHub-hosted Ubuntu runner
-**Project Type**: Single — declarative CI configuration (YAML files only)
-**Performance Goals**: Pipeline completes within 5 minutes (SC-002)
-**Constraints**: Free tier GitHub Actions; no secrets or tokens required; no branch protection changes
-**Scale/Scope**: Single workflow file, 2 jobs (test + package)
+**Testing**: `npm test` in `vscode-aviutl-script/` (runs `vscode-tmgrammar-test`); workflow validation via `actionlint` or manual tag push
+**Target Platform**: GitHub Actions (ubuntu-latest runner)
+**Project Type**: Single project — declarative VS Code extension with CI/CD workflows
+**Performance Goals**: CI/CD pipeline completes under 10 minutes (FR-006)
+**Constraints**: Free for open-source (GitHub Actions free tier); no secrets or PATs required — uses default `GITHUB_TOKEN` with `contents: write`
+**Scale/Scope**: Single workflow file addition (~40 lines YAML)
 
 ## Constitution Check
 
@@ -25,15 +25,25 @@ Add a GitHub Actions CI pipeline that automatically runs VS Code grammar tests (
 
 | Principle | Status | Notes |
 |-----------|--------|-------|
-| I. Simplicity (YAGNI) | PASS | Single workflow file with minimal configuration. No abstractions, no reusable workflows, no matrix builds — the simplest viable approach. |
-| II. Test-First (TDD) | PASS | The pipeline itself is declarative YAML, not behavioral code. TDD applies to grammar changes tested by the pipeline, not to the pipeline config itself. Verification will be done by pushing a test PR. |
-| III. Syntax Fidelity | N/A | This feature does not alter any grammar scopes. |
-| IV. Backward Compatibility | PASS | No changes to Sublime Text files. The `.github/` directory is already in `.vscodeignore`. |
-| V. Single Source of Truth | N/A | No keyword changes. |
-| Keyword Accuracy | N/A | No keyword changes. |
-| Quality Gates | PASS | This feature directly automates the "Syntax tests pass" quality gate from the constitution. |
+| I. Simplicity (YAGNI) | PASS | Single YAML file, no abstractions. Reuses existing `npm test` and `vsce package` commands. No wrapper scripts. |
+| II. Test-First (TDD) | PASS | The CD workflow itself runs tests before release (FR-009). The workflow YAML is validated by pushing a test tag. |
+| III. Syntax Fidelity | N/A | CI/CD infrastructure does not modify grammar scopes. |
+| IV. Backward Compatibility | PASS | Additive change only — new file `release.yml`. No modifications to existing `ci.yml` or Sublime package files. |
+| V. Single Source of Truth | PASS | No keyword lists involved. The workflow references the same `npm test` command as CI. |
 
-All gates pass. No violations to justify.
+**Pre-design gate result**: PASS — no violations. Proceed to Phase 0.
+
+### Post-Design Re-check (after Phase 1)
+
+| Principle | Status | Notes |
+|-----------|--------|-------|
+| I. Simplicity (YAGNI) | PASS | Single YAML file (~50 lines). Reuses existing commands. Research rejected over-engineered alternatives (reusable workflows, version enforcement). |
+| II. Test-First (TDD) | PASS | Release workflow runs tests before release (FR-009). Workflow validated by tag push. |
+| III. Syntax Fidelity | N/A | No grammar changes. |
+| IV. Backward Compatibility | PASS | `ci.yml` untouched. New `release.yml` is purely additive. |
+| V. Single Source of Truth | PASS | Same `npm test` command in both workflows. |
+
+**Post-design gate result**: PASS — no new violations introduced by design decisions.
 
 ## Project Structure
 
@@ -43,10 +53,10 @@ All gates pass. No violations to justify.
 specs/006-ci-cd/
 ├── plan.md              # This file
 ├── research.md          # Phase 0 output
-├── spec.md              # Feature specification
-├── checklists/
-│   └── requirements.md  # Spec quality checklist
-└── tasks.md             # Phase 2 output (created by /speckit.tasks)
+├── data-model.md        # Phase 1 output (minimal — no entities)
+├── quickstart.md        # Phase 1 output
+├── contracts/           # Phase 1 output (workflow contract)
+└── tasks.md             # Phase 2 output (/speckit.tasks command)
 ```
 
 ### Source Code (repository root)
@@ -54,42 +64,8 @@ specs/006-ci-cd/
 ```text
 .github/
 └── workflows/
-    └── ci.yml           # GitHub Actions workflow (single file)
+    ├── ci.yml           # Existing — CI pipeline (tests + packaging on PR/push)
+    └── release.yml      # NEW — CD pipeline (tests + package + GitHub Release on v* tag)
 ```
 
-**Structure Decision**: A single workflow file at `.github/workflows/ci.yml` is all that's needed. No `contracts/`, `data-model.md`, or `quickstart.md` are applicable — this feature is pure CI configuration with no data model, API surface, or application code.
-
-## Design
-
-### Workflow Architecture
-
-The workflow file `ci.yml` contains:
-
-**Triggers**:
-- `pull_request` targeting `master` branch
-- `push` to `master` branch
-
-**Jobs**:
-
-1. **`test`** — Grammar test suite
-   - Runs on: `ubuntu-latest`
-   - Steps: checkout → setup Node.js (latest LTS) → `npm ci` (in `vscode-aviutl-script/`) → `npm test`
-   - Working directory: `vscode-aviutl-script/`
-
-2. **`package`** — Extension packaging verification
-   - Runs on: `ubuntu-latest`
-   - Steps: checkout → setup Node.js (latest LTS) → `npm ci` (in `vscode-aviutl-script/`) → `npx vsce package` → upload `.vsix` as artifact
-   - Working directory: `vscode-aviutl-script/`
-   - The two jobs run in parallel (no dependency between them) for faster feedback.
-
-### Key Decisions
-
-- **`npm ci` over `npm install`**: Ensures reproducible installs from lockfile, appropriate for CI.
-- **No caching**: The dependency tree is small (~260 packages). Adding cache configuration would violate Principle I (YAGNI) for minimal time savings.
-- **No matrix builds**: Single Node.js LTS version per the clarified FR-005. A matrix would add complexity without clear benefit for this project.
-- **No branch protection**: Per clarification, checks are informational only. No GitHub API calls or settings changes needed.
-- **Artifact upload**: The `.vsix` file is uploaded as a GitHub Actions artifact so it can be inspected if needed, but is not published.
-
-## Complexity Tracking
-
-No constitution violations. Table not needed.
+**Structure Decision**: Single new file at `.github/workflows/release.yml`. No other source files created or modified. The existing `ci.yml` remains untouched.
