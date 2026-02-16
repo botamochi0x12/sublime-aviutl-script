@@ -1,0 +1,8 @@
+<snippet>
+	<scope>source.lua.aviutl-script</scope>
+	<description>OR,AND,XORのビット演算をします。</description>
+	<content><![CDATA[
+OR(${1:a},${2:b})$0
+]]></content>
+	<tabTrigger>OR</tabTrigger>
+</snippet>
