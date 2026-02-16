@@ -1,0 +1,7 @@
+{
+  "name": "aviutl-script-workspace",
+  "version": "0.1.0",
+  "workspaces": [
+    "vscode-aviutl-script"
+  ]
+}
